@@ -156,6 +156,12 @@
 				'as'   => 'admin.countComentarios'
 				]);
 
+			// --------------> Ayuda <--------
+			Route::get('ayuda', 
+			['as' => 'admin.ayuda.index', 
+			'uses' => 'AyudaController@index'
+			]);
+
 		});
 
 // >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> M E M B E R S
