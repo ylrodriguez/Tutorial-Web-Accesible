@@ -1,0 +1,224 @@
+@charset "UTF-8";
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  /* Margin bottom by footer height */
+  background: url('../img/geometry2.png'); 
+  background-repeat:repeat;
+}
+
+a:hover{
+   text-decoration: underline !important
+}
+
+.no-margin{
+  margin: 0px;
+}
+.no-padding{
+  padding: 0px;
+}
+
+.no-border{
+  border: 0px;
+}
+
+.figura-cuadrado{
+	padding: 3px 15px;
+}
+
+.huge {
+    font-size: 40px;
+}
+.midsize{
+  font-size: 1.3em
+}
+
+.extra-huge {
+    font-size: 4em;
+}
+
+.navbar-brand > img{
+	max-height: 100%;
+    height: 100%;
+    -o-object-fit: contain;
+    object-fit: contain;
+}
+
+.hero {
+  background: url("http://static.pexels.com/wp-content/uploads/2014/07/beach-coast-holiday-2190-825x550.jpg") no-repeat center center;
+  background-size: cover;
+  height: 50vh;
+  overflow: hidden; }
+.hero h1 {
+    color: #fff;
+    text-align: center;
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%); 
+  }
+
+.site-footer{
+  background-color: #292c2f;
+  margin-top: 32px;
+  padding-top: 32px;
+}
+
+.main-footer {
+
+  text-align: center;
+  font-size: 1.4rem;
+  padding: 4rem; }
+
+.main-footer  p.slogan,h1.slogan {
+color: #8d9093;
+font-size: 2.4rem;
+margin: 0 0 1rem; }
+.main-footer p.nombres-footer {
+color: #8d9093;
+font-size: 1.8rem;
+margin: 0; }
+
+.main-footer p.copywrite {
+color: #8f9296;
+font-size: 1.4rem;
+margin: 0; }
+
+.main-footer .links a {
+list-style: none;
+font-weight: bold;
+color: #ffffff;
+padding: 3rem 0 2rem;
+margin: 0; }
+
+.main-footer .links a::before {
+content: "•";
+padding: 0 0.4rem 0 0.8rem; }
+.main-footer .links a:last-child::after {
+content: "";
+padding: 0 0.4rem 0 0.8rem; }
+
+.glyphicon-refresh-animate {
+      -animation: spin .7s infinite linear;
+      -webkit-animation: spin2 .7s infinite linear;
+  }
+
+  @-webkit-keyframes spin2 {
+      from { -webkit-transform: rotate(0deg);}
+      to { -webkit-transform: rotate(360deg);}
+  }
+
+  @keyframes spin {
+      from { transform: scale(1) rotate(0deg);}
+      to { transform: scale(1) rotate(360deg);}
+}
+
+.marginBottom-0 {margin-bottom:0;}
+
+.dropdown-submenu{position:relative;}
+.dropdown-submenu>.dropdown-menu{top:0;left:100%;margin-top:-6px;margin-left:-1px;-webkit-border-radius:0 6px 6px 6px;-moz-border-radius:0 6px 6px 6px;border-radius:0 6px 6px 6px;}
+.dropdown-submenu>a:after{display:block;content:" ";float:right;width:0;height:0;border-color:transparent;border-style:solid;border-width:5px 0 5px 5px;border-left-color:#cccccc;margin-top:5px;margin-right:-10px;}
+.dropdown-submenu:hover>a:after{border-left-color:#555;}
+.dropdown-submenu.pull-left{float:none;}.dropdown-submenu.pull-left>.dropdown-menu{left:-100%;margin-left:10px;-webkit-border-radius:6px 0 6px 6px;-moz-border-radius:6px 0 6px 6px;border-radius:6px 0 6px 6px;}
+
+
+.panel-green > a {
+    color: #00bc8c;
+}
+
+.panel-red > a {
+    color: #e74c3c;
+}
+
+
+.panel-orange > a {
+    color: #f39c12;
+}
+
+
+.panel-babyblue > a {
+    color: #3498db;
+}
+
+div.circle-avatar{
+    /* make it responsive */
+    max-width: 240px;
+    width:100%;
+    height:auto;
+    display:block;
+
+    /* div height to be the same as width*/
+    padding-top:240px;
+    
+    /* make it a cirkle */
+    border: 2px solid;
+    border-radius:50%;
+    border-color: gray;
+    
+    /* Centering on image`s center*/
+    background-position-y: center;
+    background-position-x: center;
+    background-repeat: no-repeat;
+    
+    /* it makes the clue thing, takes smaller dimention to fill div */
+    background-size: cover;
+
+    /* it is optional, for making this div centered in parent*/
+    margin: 0 auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    }
+
+div.circle-avatar-small{
+    /* make it responsive */
+    max-width: 120px;
+    width:100%;
+    height:auto;
+    display:block;
+
+    /* div height to be the same as width*/
+    padding-top:120px;
+    
+    /* make it a cirkle */
+    border: 2px solid;
+    border-radius:50%;
+    border-color: gray;
+    
+    /* Centering on image`s center*/
+    background-position-y: center;
+    background-position-x: center;
+    background-repeat: no-repeat;
+    
+    /* it makes the clue thing, takes smaller dimention to fill div */
+    background-size: cover;
+
+    /* it is optional, for making this div centered in parent*/
+    margin: 0 auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    }
+
+
+.shadow-border{box-shadow:0px 2px 0px rgba(0,0,0,0.1)}
+
+p{
+  word-wrap: break-word;
+}
+
+
+.six-sec-ease-in-out {
+    -webkit-transition: width 6s ease-in-out;
+    -moz-transition: width 6s ease-in-out;
+    -ms-transition: width 6s ease-in-out;
+    -o-transition: width 6s ease-in-out;
+    transition: width 6s ease-in-out;
+}
