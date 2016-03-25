@@ -30,7 +30,11 @@ body {
 }
 
 .midsize{
-  font-size: 1.3em
+  font-size: 1.3em;
+}
+
+.smallsize{
+  font-size: 1.15em;
 }
 
 

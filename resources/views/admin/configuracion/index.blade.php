@@ -186,7 +186,7 @@
 						<div class="row">
 							<div class="form-group col-md-7">
 							@if ($user->status == "activated")
-								<p style="font-weight:bold">Estado del usuario  <span id="label-status" class="btn-success btn-xs glyphicon glyphicon-ok"></label> </p>
+								<p style="font-weight:bold">Estado del usuario  <span id="label-status" class="btn-success btn-xs glyphicon glyphicon-ok"></span> </p>
 								<p>Activado</p>
 							@else
 								<p style="font-weight:bold">Estado del usuario  <span id="label-status" class="btn-danger btn-xs glyphicon glyphicon-remove"></span> </p>

@@ -37,6 +37,11 @@ a:hover{
   font-size: 1.3em
 }
 
+.smallsize{
+  font-size: 1.15em;
+}
+
+
 .extra-huge {
     font-size: 4em;
 }
