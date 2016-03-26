@@ -285,6 +285,11 @@
 				'as'   => 'member.comentarios.countComentarios'
 				]);
 
+			// --------------> Ayuda <--------
+			Route::get('ayuda', 
+			['as' => 'member.ayuda.index', 
+			'uses' => 'AyudaController@index'
+			]);
 
 		
 		});
