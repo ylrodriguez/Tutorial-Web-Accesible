@@ -111,9 +111,9 @@
                 <div class="col-md-12">
                   <h3 class="smallsize"><a id="usuariosopciones" href="#usuariosopciones">4.1 Opciones</a></h3> 
                   <p>En la columna de opciones de la lista de usuarios tenemos dos tipos de opciones:</p>
-                  <div class="col-md-12 margin-bottom">
+                  <div class="col-md-12 margin-bottom" style="border:solid 1px black;background-color:#545454; padding: 5px">
                     <div class="col-md-6"><p><span class="btn btn-info  glyphicon glyphicon-list-alt" aria-hidden="true"></span>  Ver perfil </p> <p>Redirecciona a la página del <a href="#perfil">Perfil</a> del usuario seleccionado donde muestra información pública del usuario como lo es su biografia y puntaje.</p></div>
-                    <div class="col-md-6"><p><span class="btn btn-warning  glyphicon glyphicon-wrench" aria-hidden="true"></span>  Editar usuario </p> <p>Redirecciona a la página de <a href="#configuracion">Configuracion</a> donde muestra información del usuario seleccionado la cual se puede modificar.</p> 
+                    <div class="col-md-6"><p><span class="btn btn-warning  glyphicon glyphicon-wrench" aria-hidden="true"></span>  Editar usuario </p> <p>Redirecciona a la página de <a href="#configuracion">Configuración</a> donde muestra información del usuario seleccionado la cual se puede modificar.</p> 
                     </div>
                   </div>
 
@@ -123,18 +123,238 @@
               </div>
             </div>
             
-             {{-- /////////////////////CURSOS///////////////////// --}}
+            {{-- /////////////////////CURSOS///////////////////// --}}
 
-          </div>
+            <div class="col-md-12 shadow-border margin-bottom">
+              <div class="col-md-12 margin-bottom">
+                <h2 class="midsize" style="margin-top:0"><a id="cursos" href="#cursos">5. Cursos</a></h2>
+                <p>En este módulo se encuentra la lista de los cursos activos del tutorial web. Por el momento solo se tiene uno pero se abre la posibilidad de crear más para futuros proyectos. Para acceder a este panel solo basta con hacer click en la pestaña de cursos del menu de navegación. </p>
+              </div>
+
+              <div class="col-md-12 margin-bottom">
+                <div class="col-md-8">
+                  <a href="http://arqtutorial:8080/img/guidelines-admin/5cursos.png" target="_blank"><span class="sr-only">Abrir imagen en nueva pestaña</span>
+                    <img src="/img/guidelines-admin/5cursos.png" class="img-responsive img-rounded" alt="Imagen del modulo de cursos" style="margin-top: 1.5%; max-height:500px;"></a>
+                  </div>
+                  <div class="col-md-4">
+                    <p>En este panel de lista de cursos se pueden observar todos los cursos activos en el tutorial web. Se puede a su vez observar la pequeña descripción del curso y la imagen pertinente a éste.</p>
+                    <p>Existen dos opciones en este panel; la primera es agregar un nuevo curso y la segunda es editar el curso que ya existe. Solo basta con seleccionar cualquiera de las opciones y se agregará o modificará un curso.</p>
+                  </div>
+                </div>
+              </div>
+
+
+              {{-- /////////////////////LECCIONES///////////////////// --}}
+
+              <div class="col-md-12 shadow-border margin-bottom">
+                <div class="col-md-12 margin-bottom">
+                  <h2 class="midsize" style="margin-top:0"><a id="lecciones" href="#lecciones">6. Lecciones</a></h2>
+                  <p>En este módulo se encuentra la lista de las lecciones del curso que se haya escogido. Para acceder a este panel solo basta con hacer click en la pestaña de lecciones del menu de navegación, escoger el curso deseado y abrir la lista de lecciones.</p>
+                </div>
+
+                <div class="col-md-12 margin-bottom">
+                  <div class="col-md-8">
+                    <a href="http://arqtutorial:8080/img/guidelines-admin/6lecciones.png" target="_blank"><span class="sr-only">Abrir imagen en nueva pestaña</span>
+                      <img src="/img/guidelines-admin/6lecciones.png" class="img-responsive img-rounded" alt="Imagen del modulo de lecciones" style="margin-top: 1.5%; max-height:500px;"></a>
+                    </div>
+                    <div class="col-md-4">
+                      <p>En este panel se muestra el titulo y descripción del curso. Posteriormente se encuentra un botón para <a href="#agregarleccion">Añadir una nueva lección</a>. Seguido a esto se encuentra los autores del curso, el número de lecciones y el número de usuarios en el curso. </p>
+                      <p>Después de este primer panel informativo, se encuentra la lista de las lecciones del curso. Por cada lección se puede encontrar la descripción y el titulo de la leccion y aparecen cuatro opciones importantes. <a href="#vistaprevia">Vista previa para ver la lección</a>, edición de la lección que funciona igual que el panel de <a href="#agregarleccion">Agregar una nueva lección</a>, <a href="#evaluacion">Edición o creación de una evaluación</a> y por último la opción de eliminar lección que solo haciendo click se eliminará. </p>
+                    </div>
+                  </div>
+                      {{-- Añadir leccion --}}
+                  <div class="col-md-12">
+                    <h3 class="smallsize"><a id="agregarleccion" href="#agregarleccion">6.1 Añadir nueva lección</a></h3> 
+                   
+                    <div class="col-md-12 margin-bottom">
+                      <div class="col-md-8">
+                    <a href="http://arqtutorial:8080/img/guidelines-admin/6.1agregarleccion.png" target="_blank"><span class="sr-only">Abrir imagen en nueva pestaña</span>
+                      <img src="/img/guidelines-admin/6.1agregarleccion.png" class="img-responsive img-rounded center-block" alt="Imagen del modulo de añadir leccion" style="margin-top: 1.5%; max-height:500px;"></a>
+                    </div>
+                    <div class="col-md-4">
+                     <p>Para acceder a este panel solo basta con hacer click en el boton de <span class="btn btn-info btn-xs" style="font-size: 1em;">Agregar nueva leccion</span> de la lista de lecciones.</p>
+                      <p>En esta nueva pestaña se encuentra el panel de creación de lección donde solo se deben llenar unos pocos campos. Para crear una leción satisfactoriamente solo se debe digitar un titulo para la lección, una pequeña descripción, la teoria pertinente de la lección y el link del video de Youtube.</p>
+                      <p>Una vez se hayan digitado estos datos correctamente y se haya cargado el video de Youtube, el boton de crear lección se habilitara y una vez sea seleccionado, la nueva lección estara lista para los usuarios.</p>
+                    </div>
+                    </div>
+
+                  </div>
+
+
+                  {{-- Vista previa --}}
+                  <div class="col-md-12">
+                    <h3 class="smallsize"><a id="vistaprevia" href="#vistaprevia">6.2 Vista previa de la lección</a></h3> 
+                   
+                    <div class="col-md-12 margin-bottom">
+                      <div class="col-md-8">
+                    <a href="http://arqtutorial:8080/img/guidelines-admin/6.2vistaprevia.png" target="_blank"><span class="sr-only">Abrir imagen en nueva pestaña</span>
+                      <img src="/img/guidelines-admin/6.2vistaprevia.png" class="img-responsive img-rounded center-block" alt="Imagen del modulo de vista previa de la leccion" style="margin-top: 1.5%; max-height:500px;"></a>
+                    </div>
+                    <div class="col-md-4">
+                     <p>Para ver la lista previa de la lección seleccionada solo basta con hacer click en el boton de <span class="btn btn-info btn-xs" style="font-size: 1em;"><i class="glyphicon glyphicon-list-alt"></i> Vista previa</span> que se encuentra en la parte derecha de cada lección.</p>
+                      <p>En esta página se muestra el video de la lección, un panel inferior donde se encuentra la descripción de la lección, la <a href="#evaluacion">Evaluación</a> de la lección y su respectiva teoria. Por otra parte en el panel derecho se encuentra una zona de <a href="#leccionescomentario">Comentarios</a> para que los usuarios compartan sus opiniones de la leccion. </p>
+                    </div>
+                    </div>
+
+                  </div>
+
+                   {{-- Comentarios --}}
+                  <div class="col-md-12">
+                    <h3 class="smallsize"><a id="leccionescomentario" href="#leccionescomentario">6.3 Comentarios</a></h3> 
+                   
+                    <div class="col-md-12 margin-bottom">
+                      <div class="col-md-8">
+                    <a href="http://arqtutorial:8080/img/guidelines-admin/6.3comentarios.png" target="_blank"><span class="sr-only">Abrir imagen en nueva pestaña</span>
+                      <img src="/img/guidelines-admin/6.3comentarios.png" class="img-responsive img-rounded center-block" alt="Imagen del panel de comentarios" style="margin-top: 1.5%; max-height:500px;"></a>
+                    </div>
+                    <div class="col-md-4">
+                    <p>Para ver el panel de comentarios solo basta ir a cualquier lección y se encontrará disponible en la parte derecha de la página. Acá se podra visualizar los distintos comentarios de los miembros del tutorial.</p>
+                     <p>Para añadir un comentario solo basta llenar el campo de comentarios (máximo 255 caracteres) y posteriormente hacer click en el botón de <span class="btn btn-info btn-xs" style="font-size: 1em;"> Añadir comentario</span>.</p>
+                    </div>
+                    </div>
+                  </div>
+
+
+                  {{-- Evaluación --}}
+                  <div class="col-md-12">
+                    <h3 class="smallsize"><a id="evaluacion" href="#evaluacion">6.4 Evaluación</a></h3>
+                    <p>Las evaluaciones son creadas con el objetivo de que el usuario pueda calificar su progreso en el tutorial.</p> 
+                   
+                    <div class="col-md-12 margin-bottom">
+                      <div class="col-md-8">
+                    <a href="http://arqtutorial:8080/img/guidelines-admin/6.4evaluaciones.png" target="_blank"><span class="sr-only">Abrir imagen en nueva pestaña</span>
+                      <img src="/img/guidelines-admin/6.4evaluaciones.png" class="img-responsive img-rounded center-block" alt="Imagen del panel de evaluaciones" style="margin-top: 1.5%; max-height:500px;"></a>
+                    </div>
+                    <div class="col-md-4">
+                    <p>Para realizar la evaluación solo basta con ir al panel inferior de una lección e ir a la pestaña de Evaluación. Una vez la evaluación es visible, podemos ver cierta información como el puntaje, el número de intentos, el título de esta evaluación y su descripción. Por ultimo aparecen las respectivas preguntas y respuestas y se completa la evaluación haciendo click en el botón de terminar evaluación.</p>
+                    </div>
+                    </div>
+                  </div>
+
+
+                </div>
+
+
+                {{-- /////////////////////PROGRESO///////////////////// --}}
+
+            <div class="col-md-12 shadow-border margin-bottom">
+              <div class="col-md-12 margin-bottom">
+                <h2 class="midsize" style="margin-top:0"><a id="progreso" href="#progreso">7. Progreso</a></h2>
+                <p>En este módulo se encuentra el progreso del usuario en el curso de Arquitectura de celulares</p>
+              </div>
+
+              <div class="col-md-12 margin-bottom">
+                <div class="col-md-8">
+                  <a href="http://arqtutorial:8080/img/guidelines-admin/7progreso.png" target="_blank"><span class="sr-only">Abrir imagen en nueva pestaña</span>
+                    <img src="/img/guidelines-admin/7progreso.png" class="img-responsive img-rounded center-block" alt="Imagen del modulo de progreso" style="margin-top: 1.5%; max-height:500px;"></a>
+                  </div>
+                  <div class="col-md-4">
+                    <p>Esta página empieza mostrando información básica acerca del usuario y el total de puntos que ha conseguido de acuerdo a su actividad en el tutorial.</p>
+                    <p>Empieza mostrando una barra de progreso con el porcentaje completado en el curso. Posteriormente, muestra las lecciones que el usuario ha iniciado y ha terminado y muestra una pequeña gráfica para representar esto.</p>
+                    <p>Por último muestra todas las evaluaciones realizadas por el usuario con el puntaje obtenido y los intentos realizados. Además, muestra una gráfica para representar estadisticamente esto.</p>
+                  </div>
+                </div>
+              </div>
+
+
+                {{-- /////////////////////CHAT///////////////////// --}}
+
+            <div class="col-md-12 shadow-border margin-bottom">
+              <div class="col-md-12 margin-bottom">
+                <h2 class="midsize" style="margin-top:0"><a id="chat" href="#chat">8. Chat</a></h2>
+                <p>Aquí se encuentra alojado el sistema de chat para el tutorial web. Aquí los usuarios pueden compartir sus experiencias del tutorial de forma inmediata.</p>
+              </div>
+
+              <div class="col-md-12 margin-bottom">
+                <div class="col-md-8">
+                  <a href="http://arqtutorial:8080/img/guidelines-admin/8chat.png" target="_blank"><span class="sr-only">Abrir imagen en nueva pestaña</span>
+                    <img src="/img/guidelines-admin/8chat.png" class="img-responsive img-rounded center-block" alt="Imagen del modulo de chat" style="margin-top: 1.5%; max-height:500px;"></a>
+                  </div>
+                  <div class="col-md-4">
+                    <p>Para acceder al chat solo falta ir a la página principal del tutorial y encontrar el panel de la derecha donde se aloja el sistema del Chat. Una vez localizado se pueden ver los mensajes del chat con su respectivo usuario y fecha. Para añadir un mensaje al chat solo falta con escribir el nombre de usuario propio, el mensaje y por último hacer click en OK.</p>
+                    <p>Nota: Este chat es público y su uso es solo para propósitos académicos.</p>
+                  </div>
+                </div>
+              </div>
+
+               {{-- /////////////////////AYUDA///////////////////// --}}
+
+            <div class="col-md-12 shadow-border margin-bottom">
+              <div class="col-md-12 margin-bottom">
+                <h2 class="midsize" style="margin-top:0"><a id="ayuda" href="#ayuda">9. Ayuda</a></h2>
+                <p>Aquí se encuentra el manual de usuario para guiar al usuario en el uso del tutorial web.</p>
+              </div>
+              </div>
+
+
+
+              {{-- /////////////////////OPCIONES///////////////////// --}}
+
+              <div class="col-md-12 shadow-border margin-bottom">
+                <div class="col-md-12 margin-bottom">
+                  <h2 class="midsize" style="margin-top:0"><a id="opciones" href="#opciones">10. Opciones</a></h2>
+                  <p>Es la ultima opcion de la barra de navegación. Al hacer click aquí se despliega un submenu que contiene 3 elementos:</p>
+                  <ul>
+                    <li><a href="#perfil">Mi perfil</a></li>
+                    <li><a href="#configuracion">Configuracion</a></li>
+                    <li><a href="#cerrarsesion">Cerrar sesión</a></li>
+                  </ul> 
+                </div>
+
+                {{-- Mi perfil --}}
+                <div class="col-md-12">
+                  <h3 class="smallsize"><a id="perfil" href="#perfil">10.1 Mi perfil</a></h3> 
+
+                  <div class="col-md-12 margin-bottom">
+                    <div class="col-md-8">
+                      <a href="http://arqtutorial:8080/img/guidelines-admin/10.1perfil.png" target="_blank"><span class="sr-only">Abrir imagen en nueva pestaña</span>
+                        <img src="/img/guidelines-admin/10.1perfil.png" class="img-responsive img-rounded center-block" alt="Imagen del modulo de perfil de usuario" style="margin-top: 1.5%; max-height:500px;"></a>
+                      </div>
+                      <div class="col-md-4">
+                       <p>En esta página se encuentra el perfil público del usuario. En la parte superior muestra datos básicos como el nombre, biografia y el puntaje en el tutorial. Por último se ve una barra de progreso del curso.</p>
+                     </div>
+                     </div>
+                 </div>
+
+                 {{-- Configuracion --}}
+                <div class="col-md-12">
+                  <h3 class="smallsize"><a id="configuracion" href="#configuracion">10.2 Configuración</a></h3> 
+                  
+                  <div class="col-md-12 margin-bottom">
+                    <div class="col-md-8">
+                      <a href="http://arqtutorial:8080/img/guidelines-admin/10.2configuracion.png" target="_blank"><span class="sr-only">Abrir imagen en nueva pestaña</span>
+                        <img src="/img/guidelines-admin/10.2configuracion.png" class="img-responsive img-rounded center-block" alt="Imagen del modulo de configuracion" style="margin-top: 1.5%; max-height:500px;"></a>
+                      </div>
+                      <div class="col-md-4">
+                       <p>En esta página se encuentra todos los datos registrados del usuario en el tutorial. Solo basta con reemplazar los campos deseados con nueva información para sustituir la información.</p>
+                       <p>Además acá se puede editar más información como lo es la contraseña, el tipo de usuario y la imagen de perfil.</p>
+                     </div>
+                   </div>
+                 </div>
+
+                 {{-- Cerrar sesión --}}
+                <div class="col-md-12 margin-bottom">
+                  <h3 class="smallsize"><a id="cerrarsesion" href="#cerrarsesion">10.3 Cerrar sesión</a></h3> 
+                  <p>En esta última opción el usuario cerrará sesión en el tutorial de forma segura.</p>
+                 </div>
+
+
+
+              </div>
+
+
+
+
+              </div>
+            </div>
+          </div>  
+
+
+
         </div>
-      </div>  
-
-
-
-    </div>
+      </div>
+    </section>
   </div>
-</section>
-</div>
 </div>
 
 @endsection
