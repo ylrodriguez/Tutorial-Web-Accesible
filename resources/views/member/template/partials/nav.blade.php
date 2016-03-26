@@ -41,7 +41,7 @@
       <ul class="nav navbar-nav navbar-right">
         <li><a href="/member">Página principal</a></li>
         <li><a href="/member#chat">Chat</a></li>
-         <li><a href="#">Ayuda</a></li>
+         <li><a href="{{ route('member.ayuda.index') }}">Ayuda</a></li>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Opciones<span class="caret"></span></a>
           <ul class="dropdown-menu">
