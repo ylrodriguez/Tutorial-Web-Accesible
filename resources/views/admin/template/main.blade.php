@@ -3,15 +3,26 @@
 <head>
 	<meta charset="UTF-8">
 	<title>@yield('title', 'Default') | Administración </title>
+	
+	@if (Auth::user()->discapacidad == "daltonismo" || Auth::user()->discapacidad =="ceguera")
+	<link rel="stylesheet" href="{{ asset('plugins/bootstrap/css/bootstrap-flatly.css') }}">
+	@else
 	<link rel="stylesheet" href="{{ asset('plugins/bootstrap/css/bootstrap-darkly.css') }}">
+	@endif
+
 	<link rel="stylesheet" href="{{ asset('plugins/bootstrap/css/bootstrap-accessibility.css') }}">
 
 	<link rel="stylesheet" type="text/css" href="{{ asset('plugins/bootstrap-table/dist/bootstrap-table.css') }}">
 	<link rel="stylesheet" type="text/css" href="{{ asset('plugins/chosen/chosen.css') }}">
 	<link rel="stylesheet" type="text/css" href="{{ asset('plugins/trumbowyg/ui/trumbowyg.css') }}">
 	<link rel="stylesheet" type="text/css" href="{{ asset('plugins/font-awesome-4.5.0/css/font-awesome.css') }}">
+
 	{{-- Mi css --}}
+	@if (Auth::user()->discapacidad == "daltonismo" || Auth::user()->discapacidad =="ceguera")
+	<link rel="stylesheet" href="{{ asset('css/mainAccesible.css') }}">
+	@else
 	<link rel="stylesheet" href="{{ asset('css/main.css') }}">
+	@endif
 
 </head>
 <body>
@@ -88,7 +99,6 @@
 		<script src="{{ asset('plugins/bootstrap-progress/bootstrap-progressbar.js') }}"></script>
 		<script src="{{ asset('plugins/highcharts/highcharts.js') }}"></script>
 
-		
 
 		{{-- Javascript --}}
 		@yield('js')
@@ -97,3 +107,12 @@
 		</script>
 	</body>
 	</html>					
+
+
+	@if (Auth::user()->discapacidad == "bajaVision")
+	<style type="text/css">
+		body{
+			font-size: 20px;
+		}
+	</style>
+	@endif				

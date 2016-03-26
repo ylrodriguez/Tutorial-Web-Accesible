@@ -10,14 +10,14 @@
 	<link rel="stylesheet" href="{{ asset('plugins/bootstrap/css/bootstrap-darkly.css') }}">
 	@endif
 	
-<link rel="stylesheet" href="{{ asset('plugins/bootstrap/css/bootstrap-accessibility.css') }}">	
+	<link rel="stylesheet" href="{{ asset('plugins/bootstrap/css/bootstrap-accessibility.css') }}">	
 
 	<link rel="stylesheet" type="text/css" href="{{ asset('plugins/bootstrap-table/dist/bootstrap-table.css') }}">
 	<link rel="stylesheet" type="text/css" href="{{ asset('plugins/chosen/chosen.css') }}">
 	<link rel="stylesheet" type="text/css" href="{{ asset('plugins/trumbowyg/ui/trumbowyg.css') }}">
 	<link rel="stylesheet" type="text/css" href="{{ asset('plugins/font-awesome-4.5.0/css/font-awesome.css') }}">
-	{{-- Mi css --}}
 
+	{{-- Mi css --}}
 	@if (Auth::user()->discapacidad == "daltonismo" || Auth::user()->discapacidad =="ceguera")
 	<link rel="stylesheet" href="{{ asset('css/mainAccesible.css') }}">
 	@else
@@ -112,4 +112,13 @@
 			$(".site-footer").fadeIn(1000);
 		</script>
 	</body>
-	</html>					
+	</html>	
+
+
+	@if (Auth::user()->discapacidad == "bajaVision")
+	<style type="text/css">
+		body{
+			font-size: 20px;
+		}
+	</style>
+	@endif				
