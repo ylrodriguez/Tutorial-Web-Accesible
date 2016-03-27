@@ -38,75 +38,84 @@
 						</div>
 						<div class="tab-pane fade" id="evaluacion">
 
-							<div class="col-md-12">
-								<span class="green-accesible" style="font-size: 2em">Puntaje: </span>
+							<div hidden id="evaluacionPanel" class="col-md-12">
+								<div class="col-md-12">
+									<span class="green-accesible"style="font-size: 2em;">Puntaje: </span>
 
-								@if (isset($pivot)) {{-- Mirar si existe variable --}}
-								<span style="font-size:  1.8em">{{$pivot->puntaje}}</span>
-								@else
-								<span style="font-size: 1.8em">No se ha realizado la evaluación</span>
-								@endif
+									@if (isset($pivot)) {{-- Mirar si existe variable --}}
+									<span style="font-size:  1.8em">{{$pivot->puntaje}}</span>
+									@else
+									<span style="font-size: 1.8em">No se ha realizado la evaluación</span>
+									@endif
 
-							</div>
+								</div>
 
-							<div class="col-md-12  shadow-border" style="margin-bottom: 10px">
-								<span class="red-accesible" style="font-size: 2em">Intentos: </span>
-								<?php $numIntentos=0; 	?>
-								@if (isset($pivot))
-								<span style="font-size: 1.8em">{{$pivot->intentos}} </span>
-								<span style="color: #aaa; font-size: 0.9em">(El número de intentos puede afectar tu puntaje, máximo 5 intentos)</span>
-								<?php $numIntentos=$pivot->intentos; ?>
-								@else
-								
-								<span style="color: #aaa; font-size: 0.9em">(El número de intentos puede afectar tu puntaje, máximo 5 intentos)</span>
-								@endif
-							</div>
+								<div class="col-md-12  shadow-border" style="margin-bottom: 10px">
+									<span class="red-accesible" style="font-size: 2em;">Intentos: </span>
+									<?php $numIntentos=0; 	?>
+									@if (isset($pivot))
+									<span style="font-size: 1.8em">{{$pivot->intentos}} </span>
+									<span class="black-accesible" style=" font-size: 0.9em">(El número de intentos puede afectar tu puntaje, máximo 5 intentos)</span>
+									<?php $numIntentos=$pivot->intentos; ?>
+									@else
+									<span class="black-accesible" style=" font-size: 0.9em">(El número de intentos puede afectar tu puntaje, máximo 5 intentos)</span>
+									@endif
+								</div>
 
-							<div class="col-md-8 col-md-offset-2" id="preguntasEvaluacion">
-								{{-- Si existe evaluacion en la leccion --}}
-								@if(isset($leccion->evaluaciones[0]))
-								@if ($numIntentos < 5)
-								{{-- expr --}}
-								
-								<?php
-								
-								$evaluacion = $leccion->evaluaciones[0];
-								$preguntas = $evaluacion->preguntas;
-								$i = 0;
-								?>
+								<div class="col-md-8 col-md-offset-2" id="preguntasEvaluacion">
+									{{-- Si existe evaluacion en la leccion --}}
+									@if(isset($leccion->evaluaciones[0]))
+									@if ($numIntentos < 5)
+									{{-- expr --}}
 
-								<h3 class="green-accesible">Evaluación: {{$leccion->titulo}}</h3>
-								<p>{{$evaluacion->descripcion}}</p>
-								<hr/>
+									<?php
 
-								{!! Form::open(['route' => ['admin.cursos.evaluaciones.saveEvaluacion',$evaluacion->id, 'leccion_id' => $leccion->id, 'num' => $num, 'slug' => $leccion->slug], 'method' => 'POST']) !!}
-								
-								@foreach ($preguntas as $pregunta)
-								<?php $i++;?>
-								<div class="col-md-12 shadow-border" style="margin-bottom: 10px"> 
-									<label>{{$i.'. '.$pregunta->pregunta}}</label>
-									<div class="form-group">
-										@foreach ($pregunta->opciones as $opcion)
-										<div class="col-md-12">
-											<input type="radio" name="radioEvaluacion{{$pregunta->id}}" id="radio{{$opcion->id}}" value="{{$opcion->id}}" required/><label for="radio{{$opcion->id}}">{{$opcion->descripcion}}</label>
+									$evaluacion = $leccion->evaluaciones[0];
+									$preguntas = $evaluacion->preguntas;
+									$i = 0;
+									?>
+
+									<h3 class="green-accesible">Evaluación: {{$leccion->titulo}}</h3>
+									<p>{{$evaluacion->descripcion}}</p>
+									<hr/>
+
+									{!! Form::open(['route' => ['member.cursos.evaluaciones.saveEvaluacion',$evaluacion->id, 'leccion_id' => $leccion->id, 'num' => $num, 'slug' => $leccion->slug], 'method' => 'POST']) !!}
+
+									@foreach ($preguntas as $pregunta)
+									<?php $i++;?>
+									<div class="col-md-12 shadow-border" style="margin-bottom: 10px"> 
+									<fieldset> 
+										<legend>{{$i.'. '.$pregunta->pregunta}}</legend>
+										<div class="form-group">
+											@foreach ($pregunta->opciones as $opcion)
+											<div class="col-md-12">
+												<input type="radio" name="radioEvaluacion{{$pregunta->id}}" id="radio{{$opcion->id}}" value="{{$opcion->id}}" required/><label for="radio{{$opcion->id}}">{{$opcion->descripcion}}</label>
+											</div>
+											@endforeach
 										</div>
-										@endforeach
+									</fieldset> 
 									</div>
+									<hr/>	
+									@endforeach
+
+									<div class="form-group col-md-12">
+										<input id="boton-evaluacion" class="btn btn-primary pull-right btn-sm" type="submit" value="¡Terminar evaluacion!">
+									</div>
+
+									{!! Form::close() !!}
+									@endif
+
+									@endif
+
+
+
 								</div>
-								<hr/>	
-								@endforeach
-
-								<div class="form-group col-md-12">
-									<input id="boton-evaluacion" class="btn btn-primary pull-right btn-sm" type="submit" value="¡Terminar evaluacion!">
-								</div>
-								@endif
-								{!! Form::close() !!}
-								@endif
-
-
-
 							</div>
-
+							
+							<div class="col-md-12" id="beforetest">
+								<span class="sr-only">Alerta: </span>
+								<p>¡Espera un momento! Aún no has terminado la lección. Por favor complétala primero ya sea terminando de ver el video o revisando la teoria.</p>
+							</div>
 
 						</div>
 					</div>
@@ -150,6 +159,10 @@
 
 @endsection
 
+<?php 
+$leccion_user = Auth::user()->lecciones->where('id',$leccion->id)->first();
+?>
+
 {{-- Javascript --}}
 @section('js')
 {{-- Primer script --}}
@@ -161,6 +174,31 @@
 
 	$('#divTest').append(code);
 	$('#teoria').append($('#divTest').text());
+
+	code = '<div class="col-md-12 shadow-border" style="margin: 15px 0px"></div></hr><div class="col-md-12"><button title="Finalizar lección" type="button" onclick="finalizarLeccion(this)" class="btn btn-primary pull-right" style="margin-right: 5px; margin-top: 0; padding-left: 4px;padding-right: 4px;" id="botonFinlec">Finalizar lección <span class="glyphicon glyphicon-saved"></span></button></div>'
+
+	$('#teoria').append(code);
+
+
+
+	
+
+	function finalizarLeccion(){
+		videoRunORFin('videoFinished');
+		$('#botonFinlec').prop('disabled',true);
+		$('#botonFinlec').text('La lección ya ha sido finalizada');
+	}
+
+
+	//Mostrar panel de Evaluación o no
+	@if ($leccion_user != null)
+	@if ($leccion_user->pivot->state == "finished")
+	$('#beforetest').hide();
+	$('#evaluacionPanel').show();
+	$('#botonFinlec').prop('disabled',true);
+	$('#botonFinlec').text('La lección ya ha sido finalizada');
+	@endif
+	@endif
 
 </script>
 
@@ -326,6 +364,17 @@
     			type: 'get',
     			success:  function (response) {
     				console.log(response);
+    				if(evento == "videoFinished"){
+    					$('#beforetest').hide();
+    					$('#evaluacionPanel').show();
+
+    					var code = '<div class="alert alert-success"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>Se ha terminado la leccción correctamente</div>';
+
+    					$('.alertmessage').append(code);
+    					$('.alertmessage').show();
+    					$('.alert').show();
+    					//$('.alert').delay(4000).slideUp(1000);
+    				}
 
     			}
     		});
