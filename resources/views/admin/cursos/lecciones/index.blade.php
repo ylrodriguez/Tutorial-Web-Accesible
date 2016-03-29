@@ -8,13 +8,14 @@
 <div class="row" hidden id="panelLecciones" style="margin: 0.05%">
   <div class="col-md-10 col-md-offset-1">
     <section class="section-admin">
-      <div class="panel panel-default" style="border-color: #375A7F">
-        <div class="panel-body"  style="background-color: #375A7F;">
+      <div class="panel panel-default" style="border-color: #2c3e50">
+         <div class="panel-body"  style=" @if (Auth::user()->discapacidad == "daltonismo" || Auth::user()->discapacidad =="ceguera")background-color: #2c3e50; @else background-color: #375A7F; @endif">
 
           @include('flash::message') <!-- Para incluir en la plantilla flash -->
           @include('admin.template.partials.errors')  <!-- Agregar errores -->
 
-          <div class="jumbotron" style="padding: 4%; margin-bottom: 0px; background-image:url({{ asset('/img/admin-course-background.jpg') }}">
+           <div class="jumbotron" style="padding: 4%;border-radius: 0; margin-bottom: 0px;   @if (Auth::user()->discapacidad == "daltonismo" || Auth::user()->discapacidad =="ceguera")background-image:url({{ asset('/img/course-background.jpeg') }} @else background-image:url({{ asset('/img/admin-course-background.jpg') }} @endif">
+           
             <h1>{{$curso->titulo}}</h1>
             <p>{{$curso->descripcion}}</p>
             <a href="{{ route('admin.cursos.lecciones.create',$curso->id) }}" class="btn btn-primary btn-md">Agregar nueva lección</a>
@@ -116,6 +117,8 @@
           padding-left: 1%;
         }
       </style>
+
+      
 
 
       @endsection

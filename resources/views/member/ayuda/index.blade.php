@@ -319,10 +319,10 @@
 @endsection
 
 
-<style type="text/css">
+
   @if (Auth::user()->discapacidad == "daltonismo" || Auth::user()->discapacidad =="ceguera")
+  <style type="text/css">
   p{color:white;}
-  
+  </style>
   @endif"
 
-</style>

@@ -308,4 +308,3 @@
         return $cursoID;
       }
 </script>
-

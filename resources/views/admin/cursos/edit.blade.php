@@ -13,8 +13,8 @@
           
             <div class="row">
              <div class="col-md-12">
-                    <div class="panel panel-default" style="border: 0px">
-                    <div class="panel-body" style="background-color: #375A7F">
+                    <div class="panel panel-default" style="border:0">
+                  <div class="panel-body" style="@if (Auth::user()->discapacidad == "daltonismo" || Auth::user()->discapacidad =="ceguera")background-color: #2c3e50; @else background-color: #375A7F; @endif">
                          <div class="col-md-12">
                          <h1 id="title-course" style="color: white">Editar curso: {{$curso->titulo}}</h1>
                          <hr/>

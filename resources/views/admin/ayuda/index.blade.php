@@ -9,13 +9,12 @@
   <div class="col-md-offset-2 col-md-8">
     <section class="section-admin" >
       <div class="panel panel-default" style="border-radius:1.5em;">
-        <div class="panel-body"  style="background-color: #375A7F; border-radius:1.5em;">
-
+        <div class="panel-body"  style="@if (Auth::user()->discapacidad == "daltonismo" || Auth::user()->discapacidad =="ceguera")background-color: #2c3e50; @else background-color: #375A7F; @endif; border-radius:1.5em;">
 
           <div class="row">
            <div class="col-md-12">
-            <div class="panel panel-default" style="border-color:#375A7F;">
-              <div class="panel-body" style="background-color: #375A7F">
+             <div class="panel panel-default" style="@if (Auth::user()->discapacidad == "daltonismo" || Auth::user()->discapacidad =="ceguera")border-color:#2c3e50;@else border-color:#375A7F;@endif">
+              <div class="panel-body" style="@if (Auth::user()->discapacidad == "daltonismo" || Auth::user()->discapacidad =="ceguera")background-color: #2c3e50; @else background-color: #375A7F; @endif">
                <div class="col-md-12">
                  <h1 style="color: white">Manual de usuario <i class="fa fa-book"></i></h1>
                </div>
@@ -25,8 +24,8 @@
        </div>
 
        <div class="row">
-         <div class="panel panel-default" style="border-color:#375A7F;">
-          <div class="panel-body" style="background-color: #375A7F">
+         <div class="panel panel-default" style="@if (Auth::user()->discapacidad == "daltonismo" || Auth::user()->discapacidad =="ceguera")border-color:#2c3e50;@else border-color:#375A7F;@endif">
+          <div class="panel-body" style="@if (Auth::user()->discapacidad == "daltonismo" || Auth::user()->discapacidad =="ceguera")background-color: #2c3e50; @else background-color: #375A7F; @endif">
             {{-- //////////////////INTRODUCCION///////////////////////// --}}
             <div class="col-md-12 shadow-border margin-bottom">
              <div class="col-md-6">
@@ -111,7 +110,7 @@
                 <div class="col-md-12">
                   <h3 class="smallsize"><a id="usuariosopciones" href="#usuariosopciones">4.1 Opciones</a></h3> 
                   <p>En la columna de opciones de la lista de usuarios tenemos dos tipos de opciones:</p>
-                  <div class="col-md-12 margin-bottom" style="border:solid 1px black;background-color:#545454; padding: 5px">
+                  <div class="col-md-12 margin-bottom" style="border:solid 1px black;background-color:#403c3c; padding: 5px">
                     <div class="col-md-6"><p><span class="btn btn-info  glyphicon glyphicon-list-alt" aria-hidden="true"></span>  Ver perfil </p> <p>Redirecciona a la página del <a href="#perfil">Perfil</a> del usuario seleccionado donde muestra información pública del usuario como lo es su biografia y puntaje.</p></div>
                     <div class="col-md-6"><p><span class="btn btn-warning  glyphicon glyphicon-wrench" aria-hidden="true"></span>  Editar usuario </p> <p>Redirecciona a la página de <a href="#configuracion">Configuración</a> donde muestra información del usuario seleccionado la cual se puede modificar.</p> 
                     </div>
@@ -376,4 +375,9 @@
 
 </style>
 
+  @if (Auth::user()->discapacidad == "daltonismo" || Auth::user()->discapacidad =="ceguera")
+  <style type="text/css">
+  p{color:white;}
+  </style>
+  @endif
 
