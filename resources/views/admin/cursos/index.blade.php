@@ -8,14 +8,14 @@
   <div class="row" hidden id="panelCursos">
     <div class="col-md-offset-2 col-md-8">
     <section class="section-admin" >
-          <div class="panel panel-default" style="border-radius:1.5em;">
-          <div class="panel-body"  style="background-color: #375A7F; border-radius:1.5em;">
+           <div class="panel panel-default" style="border-radius:1.5em;">
+          <div class="panel-body"  style="@if (Auth::user()->discapacidad == "daltonismo" || Auth::user()->discapacidad =="ceguera")background-color: #2c3e50; @else background-color: #375A7F; @endif; border-radius:1.5em;">
 
           
           <div class="row">
            <div class="col-md-12">
-                  <div class="panel panel-default" style="border-color:#375A7F;">
-                  <div class="panel-body" style="background-color: #375A7F">
+                  <div class="panel panel-default" style="border:0">
+                  <div class="panel-body" style="@if (Auth::user()->discapacidad == "daltonismo" || Auth::user()->discapacidad =="ceguera")background-color: #2c3e50; @else background-color: #375A7F; @endif">
                        <div class="col-md-12">
                        <h1 style="color: white">Lista de cursos</h1>
                        <a href="{{route('admin.cursos.create')}}" class="btn btn-success btn-sm" style="font-size: 1em;">Agregar nuevo curso</a>
