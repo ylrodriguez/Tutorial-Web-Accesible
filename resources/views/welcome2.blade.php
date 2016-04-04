@@ -13,7 +13,7 @@
 	<section id="header">
 		<div class="inner">
 			{{--  <img alt="" src="{{ asset('img/whiteicon.png') }}"> --}}
-			<img alt="" src="{{ asset('img/untitled.png') }}">
+			<span class="icon major fa-mobile"></span>
 			<h1>Hola, bienvenido al tutorial web de</br> <strong>Arquitectura de celulares</strong></h1>
 
 				<p> Acá encontrarás diferentes cursos y lecciones que te ayudarán a<br /> mejorar tu conocimiento acerca de estos dispositivos.</p>
