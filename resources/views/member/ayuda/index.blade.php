@@ -324,5 +324,4 @@
   <style type="text/css">
   p{color:white;}
   </style>
-  @endif"
-
+  @endif
