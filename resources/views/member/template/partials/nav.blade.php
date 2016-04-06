@@ -15,7 +15,12 @@
       </div>
 
       <a class="navbar-brand figura-cuadrado" href="/member">
-        <img alt="Ir a página de inicio." src="{{ asset('img/icon-final.png') }}">
+        @if (Auth::user()->discapacidad == "daltonismo" || Auth::user()->discapacidad =="ceguera")
+          <img alt="Ir a página de inicio." src="{{ asset('img/untitled.png') }}">
+        @else
+          <img alt="Ir a página de inicio." src="{{ asset('img/icon-final.png') }}">
+        @endif
+        
       </a> 
     </div>
 

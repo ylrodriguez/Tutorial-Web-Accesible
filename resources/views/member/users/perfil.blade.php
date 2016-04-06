@@ -70,11 +70,12 @@
 							<div class="col-md-3">
 								{{$curso->titulo}}
 							</div>
-							<div class="progress no-padding col-md-5 col-md-offset-1" style="height: 30px;">
+							
+							<div class="col-md-9">
 								<span class="sr-only">Completado {{$curso->pivot->progreso}}%</span>
-								<div class="progress-bar six-sec-ease-in-out" role="progressbar" data-transitiongoal="{{$curso->pivot->progreso}}" aria-hidden="true">
-									
-									<p style="margin-top: 10px; font-size: 1.3em">{{$curso->pivot->progreso}}%</p>
+								<div class="progress">
+									<div class="progress-bar six-sec-ease-in-out" role="progressbar" data-transitiongoal="{{$curso->pivot->progreso}}">
+									</div>
 								</div>
 							</div>
 						</div>
@@ -96,7 +97,7 @@
 @section('js')
 
 <script type="text/javascript">
-	$('.progress .progress-bar').progressbar();
+	$('.progress .progress-bar').progressbar({display_text: 'fill'});
 </script>
 
 @endsection
