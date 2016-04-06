@@ -117,12 +117,12 @@
 							<div class="col-md-5 col-md-offset-2" style="height: 30px;">
 								@if ($leccion->pivot->state == 'started')
 								{{-- true expr --}}
-								<h3 class="midsize no-margin" style="margin-bottom:10px"><span class="label label-danger" alt="Lección iniciada">Lección iniciada<span class="glyphicon glyphicon-remove"></span></span></h3>
+								<span class="midsize no-margin" style="margin-bottom:10px"><span class="label label-danger" alt="Lección iniciada">Lección iniciada<span class="glyphicon glyphicon-remove"></span></span></span>
 								@endif
 
 								@if ($leccion->pivot->state == 'finished')
 								{{-- false expr --}}
-								<h3 class="midsize no-margin" style="margin-bottom:10px"><span class="label label-success" alt="Lección finalizada">Lección finalizada <span class="glyphicon glyphicon-ok"></span></span></h3>
+								<span class="midsize no-margin" style="margin-bottom:10px"><span class="label label-success" alt="Lección finalizada">Lección finalizada <span class="glyphicon glyphicon-ok"></span></span></span>
 								@endif 
 							</div>
 						</div>
@@ -155,18 +155,18 @@
 							</div>
 							<div class="col-md-3 col-md-offset-1">
 								@if (round($evaluacion->pivot->puntaje,2) > 80)
-								<h3 class="midsize no-margin"><span class="label label-success">Puntaje: {{round($evaluacion->pivot->puntaje,2)}}</span></h3>
+								<span class="midsize no-margin"><span class="label label-success">Puntaje: {{round($evaluacion->pivot->puntaje,2)}}</span></span>
 								@else
-								<h3 class="midsize no-margin"><span class="label label-danger">Puntaje: {{round($evaluacion->pivot->puntaje,2)}}</span></h3>
+								<span class="midsize no-margin"><span class="label label-danger">Puntaje: {{round($evaluacion->pivot->puntaje,2)}}</span></span>
 								@endif
 								
 							</div>
 							<div class="col-md-3 col-md-offset-1">
 
 								@if ($evaluacion->pivot->intentos > 3)
-								<h3 class="midsize no-margin"><span class="label label-danger">Intentos: {{$evaluacion->pivot->intentos}}</span></h3>
+								<span class="midsize no-margin"><span class="label label-danger">Intentos: {{$evaluacion->pivot->intentos}}</span></span>
 								@else
-								<h3 class="midsize no-margin"><span class="label label-success">Intentos: {{$evaluacion->pivot->intentos}}</span></h3>
+								<span class="midsize no-margin"><span class="label label-success">Intentos: {{$evaluacion->pivot->intentos}}</span></span>
 								@endif
 
 								
