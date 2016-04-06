@@ -5,7 +5,7 @@
 
 @section('extraSpace')
 
-  <div class="row" hidden id="panelCursos">
+  <div class="row" hidden id="panelCursos" style="margin: 0.05%; display: block;">
     <div class="col-md-offset-2 col-md-8">
     <section class="section-admin" >
            <div class="panel panel-default" style="border-radius:1.5em;">
