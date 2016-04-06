@@ -26,7 +26,7 @@
 					</div>
 
 					<div class="col-md-7 col-md-offset-1">
-					
+						
 						<div class="col-md-12" style="margin-bottom: 15px">
 							<h1 class="extra-huge">Mi progreso</h1>
 							<span style="font-weight: bold">Nombre: </span>
@@ -86,8 +86,8 @@
 								{{$curso->titulo}}
 							</div>
 							<div class="progress no-padding col-md-7 col-md-offset-1" style="height: 30px;">
-								<div class="progress-bar six-sec-ease-in-out" role="progressbar" data-transitiongoal="{{$curso->pivot->progreso}}">
-									<span class="sr-only">Completado {{$curso->pivot->progreso}}%</span>
+								<span class="sr-only">Completado {{$curso->pivot->progreso}}%</span>
+								<div class="progress-bar six-sec-ease-in-out" role="progressbar" data-transitiongoal="{{$curso->pivot->progreso}}" aria-hidden="true">
 									<p style="margin-top: 10px; font-size: 1.3em">{{$curso->pivot->progreso}}%</p>
 								</div>
 							</div>
@@ -126,12 +126,12 @@
 							</div>
 						</div>
 						@endforeach
-							
-							<div class="col-md-12">
-								<div class="col-md-5 col-md-offset-3">
-									<div id="container" style="width:120%; height:380px;"></div>
-								</div>
+						
+						<div class="col-md-12">
+							<div class="col-md-5 col-md-offset-3">
+								<div id="container" style="width:120%; height:380px;"></div>
 							</div>
+						</div>
 
 						@endif
 
@@ -152,33 +152,33 @@
 							<div class="col-md-4 shadow-border">
 								{{$evaluacion->descripcion}}
 							</div>
-							 <div class="col-md-3 col-md-offset-1">
-							 @if (round($evaluacion->pivot->puntaje,2) > 80)
-							 	<h3 class="midsize no-margin"><span class="label label-success">Puntaje: {{round($evaluacion->pivot->puntaje,2)}}</span></h3>
-							 @else
-							 	<h3 class="midsize no-margin"><span class="label label-danger">Puntaje: {{round($evaluacion->pivot->puntaje,2)}}</span></h3>
-							 @endif
-							 	
-                            </div>
-                            <div class="col-md-3 col-md-offset-1">
+							<div class="col-md-3 col-md-offset-1">
+								@if (round($evaluacion->pivot->puntaje,2) > 80)
+								<h3 class="midsize no-margin"><span class="label label-success">Puntaje: {{round($evaluacion->pivot->puntaje,2)}}</span></h3>
+								@else
+								<h3 class="midsize no-margin"><span class="label label-danger">Puntaje: {{round($evaluacion->pivot->puntaje,2)}}</span></h3>
+								@endif
+								
+							</div>
+							<div class="col-md-3 col-md-offset-1">
 
-                            	@if ($evaluacion->pivot->intentos > 3)
-							 	<h3 class="midsize no-margin"><span class="label label-danger">Intentos: {{$evaluacion->pivot->intentos}}</span></h3>
-							 @else
-							 	<h3 class="midsize no-margin"><span class="label label-success">Intentos: {{$evaluacion->pivot->intentos}}</span></h3>
-							 @endif
+								@if ($evaluacion->pivot->intentos > 3)
+								<h3 class="midsize no-margin"><span class="label label-danger">Intentos: {{$evaluacion->pivot->intentos}}</span></h3>
+								@else
+								<h3 class="midsize no-margin"><span class="label label-success">Intentos: {{$evaluacion->pivot->intentos}}</span></h3>
+								@endif
 
-                                
-                            </div>
+								
+							</div>
 
 						</div>
 						@endforeach
 
-							<div class="col-md-12">
-								<div class="col-md-5 col-md-offset-3">
-									<div id="container2" style="width:120%; height:380px;"></div>
-								</div>
+						<div class="col-md-12">
+							<div class="col-md-5 col-md-offset-3">
+								<div id="container2" style="width:120%; height:380px;"></div>
 							</div>
+						</div>
 
 						@endif
 					</div>
@@ -194,7 +194,7 @@
 @section('js')
 
 @if (Auth::user()->discapacidad != "daltonismo" && Auth::user()->discapacidad !="ceguera")
-			<script src="{{ asset('plugins/highcharts/highchartsDark.js') }}"></script>
+<script src="{{ asset('plugins/highcharts/highchartsDark.js') }}"></script>
 @endif
 
 
@@ -204,108 +204,108 @@
 
 <script type="text/javascript">
 	    //Leccion progreso
-        $.ajax({
-          dataType: 'json',
-          url: '{{ route('admin.progreso.leccionProgreso') }}',
-          type: 'get',
-          success:  function (response) {
-          	console.log(response);
-           chartLeccion(response);
-         }
-       });
+	    $.ajax({
+	    	dataType: 'json',
+	    	url: '{{ route('admin.progreso.leccionProgreso') }}',
+	    	type: 'get',
+	    	success:  function (response) {
+	    		console.log(response);
+	    		chartLeccion(response);
+	    	}
+	    });
 
-        function chartLeccion(data){
-          $('#container').highcharts({
-            chart: {
-              plotBackgroundColor: null,
-              plotBorderWidth: 0,
-              plotShadow: false
-            },
-            title: {
-              text: '<strong>'+data[0][1]+'</strong><br><strong>Lecciones</strong><br>iniciadas<br> completadas',
-              align: 'center',
-              verticalAlign: 'middle',
-              y: 40
-            },
-            tooltip: {
-              pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
-            },
-            plotOptions: {
-              pie: {
-                dataLabels: {
-                  enabled: true,
-                  distance: -50,
-                  style: {
-                    fontWeight: 'bold',
-                    color: 'white',
-                    textShadow: '0px 1px 2px black'
-                  }
-                },
-                startAngle: -90,
-                endAngle: 90,
-                center: ['50%', '75%']
-              }
-            },
-            series: [{
-              type: 'pie',
-              name: 'Progreso',
-              innerSize: '50%',
-              data: data
-            }]
-          });
-        }
+	    function chartLeccion(data){
+	    	$('#container').highcharts({
+	    		chart: {
+	    			plotBackgroundColor: null,
+	    			plotBorderWidth: 0,
+	    			plotShadow: false
+	    		},
+	    		title: {
+	    			text: '<strong>'+data[0][1]+'</strong><br><strong>Lecciones</strong><br>iniciadas<br> completadas',
+	    			align: 'center',
+	    			verticalAlign: 'middle',
+	    			y: 40
+	    		},
+	    		tooltip: {
+	    			pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+	    		},
+	    		plotOptions: {
+	    			pie: {
+	    				dataLabels: {
+	    					enabled: true,
+	    					distance: -50,
+	    					style: {
+	    						fontWeight: 'bold',
+	    						color: 'white',
+	    						textShadow: '0px 1px 2px black'
+	    					}
+	    				},
+	    				startAngle: -90,
+	    				endAngle: 90,
+	    				center: ['50%', '75%']
+	    			}
+	    		},
+	    		series: [{
+	    			type: 'pie',
+	    			name: 'Progreso',
+	    			innerSize: '50%',
+	    			data: data
+	    		}]
+	    	});
+	    }
 
         //Evaluación aprobada
         $.ajax({
-          dataType: 'json',
-          url: '{{ route('admin.progreso.evaluacionProgreso') }}',
-          type: 'get',
-          success:  function (response) {
-          	console.log(response);
-           chartEvaluacion(response);
-         }
-       });
+        	dataType: 'json',
+        	url: '{{ route('admin.progreso.evaluacionProgreso') }}',
+        	type: 'get',
+        	success:  function (response) {
+        		console.log(response);
+        		chartEvaluacion(response);
+        	}
+        });
 
         function chartEvaluacion(data){
-          $('#container2').highcharts({
-            chart: {
-              plotBackgroundColor: null,
-              plotBorderWidth: 0,
-              plotShadow: false
-            },
-            title: {
-              text: '<strong>'+data[0][1]+'</strong><br><strong>Evaluaciones</strong><br>aprobadas<br>',
-              align: 'center',
-              verticalAlign: 'middle',
-              y: 40
-            },
-            tooltip: {
-              pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
-            },
-            plotOptions: {
-              pie: {
-                dataLabels: {
-                  enabled: true,
-                  distance: -50,
-                  style: {
-                    fontWeight: 'bold',
-                    color: 'white',
-                    textShadow: '0px 1px 2px black'
-                  }
-                },
-                startAngle: -90,
-                endAngle: 90,
-                center: ['50%', '75%']
-              }
-            },
-            series: [{
-              type: 'pie',
-              name: 'Progreso',
-              innerSize: '50%',
-              data: data
-            }]
-          });
+        	$('#container2').highcharts({
+        		chart: {
+        			plotBackgroundColor: null,
+        			plotBorderWidth: 0,
+        			plotShadow: false
+        		},
+        		title: {
+        			text: '<strong>'+data[0][1]+'</strong><br><strong>Evaluaciones</strong><br>aprobadas<br>',
+        			align: 'center',
+        			verticalAlign: 'middle',
+        			y: 40
+        		},
+        		tooltip: {
+        			pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+        		},
+        		plotOptions: {
+        			pie: {
+        				dataLabels: {
+        					enabled: true,
+        					distance: -50,
+        					style: {
+        						fontWeight: 'bold',
+        						color: 'white',
+        						textShadow: '0px 1px 2px black'
+        					}
+        				},
+        				startAngle: -90,
+        				endAngle: 90,
+        				center: ['50%', '75%']
+        			}
+        		},
+        		series: [{
+        			type: 'pie',
+        			name: 'Progreso',
+        			innerSize: '50%',
+        			data: data
+        		}]
+        	});
         }
-</script>
+    </script>
 
-@endsection
+    @endsection
