@@ -4,7 +4,7 @@
 
 @section('extraSpace')
 
-<div class="row" hidden id="panelLeccion">
+<div class="row" hidden id="panelLeccion" style="margin: 0.05%; display: block;">
 	<div class="col-md-8" style="padding-right:0.2%; padding-left:0.2%">
 
 		<div class="col-md-12"><h2>{{$num}}. {{$leccion->titulo}}</h2></div>

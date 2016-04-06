@@ -4,8 +4,8 @@
 
 @section('extraSpace')
 
-<div class="row" id="panelPerfil">
-	<div class="col-md-12">
+<div class="row" id="panelPerfil" style="margin: 0.05%; display: block;">
+	<div class="col-md-12 no-padding">
 		<div class="panel panel-default">
 			<div class="panel-body" style="padding:30px;">
 				<div class="row">

@@ -4,7 +4,7 @@
 
 @section('extraSpace')
 
-<div class="row" id="panelPerfil">
+<div class="row" id="panelPerfil" style="margin: 0.05%; display: block;">
     <div class="col-md-7 col-md-offset-1">
         <div class="panel panel-default">
             <div class="panel-body" style="padding:30px;">
