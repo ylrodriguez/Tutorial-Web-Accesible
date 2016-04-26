@@ -117,7 +117,7 @@
 							<div class="col-md-5 col-md-offset-2" style="height: 30px;">
 								@if ($leccion->pivot->state == 'started')
 								{{-- true expr --}}
-								<span class="midsize no-margin" style="margin-bottom:10px"><span class="label label-danger" alt="Lección iniciada">Lección iniciada<span class="glyphicon glyphicon-remove"></span></span></span>
+								<span class="midsize no-margin" style="margin-bottom:10px"><span class="label label-danger" alt="Lección iniciada">Lección iniciada <span class="fa fa-exclamation"></span></span></span>
 								@endif
 
 								@if ($leccion->pivot->state == 'finished')

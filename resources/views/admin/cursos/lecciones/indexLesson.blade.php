@@ -133,7 +133,7 @@
 	<div class="col-md-4" style="padding-right:0.9%; padding-left: 0.2%">
 		<div class="col-md-12" style="background-color: transparent">	<h2>Comentarios</h2></div>
 		<div class="col-md-12">
-			<div class="panel panel-default" style="border-color: #2C3E50; max-height: 479.094px;overflow-y: scroll;">
+			<div class="panel panel-default" style="border-color: #2C3E50; max-height: 500px;overflow-y: scroll;">
 				<div class="panel-body panel-body-chat" hidden id="panelBody-comentarios"style="@if (Auth::user()->discapacidad == "daltonismo" || Auth::user()->discapacidad =="ceguera")background-color: #ECECEC; @else background-color: #375A7F; @endif; padding-top: 10px; padding-top: 10px; padding-bottom: 10px;">
 
 					
@@ -259,7 +259,7 @@ $leccion_user = Auth::user()->lecciones->where('id',$leccion->id)->first();
     		$.ajax({
     			dataType: 'json',
     			data: dataEnviar,
-    			url: 'http://arqtutorial:8080/member/comentarios/'+$coment_id+'/destroy',
+    			url: 'http://arqtutorial:8080/admin/comentarios/'+$coment_id+'/destroy',
     			type: 'get',
     			success:  function (response) {
     				console.log(response);
@@ -275,6 +275,9 @@ $leccion_user = Auth::user()->lecciones->where('id',$leccion->id)->first();
     				}
     				$('.nueva-fila').slideToggle(1000);
 
+    			},
+    			error: function(XMLHttpRequest, textStatus, errorThrown) {
+    				console.log("Se presentó algun error: "+errorThrown);
     			}
     		});
             //Fin ajax

@@ -110,17 +110,14 @@ class ComentariosController extends Controller
 
         $leccion_id = $request->leccion_id;
 
-        //Recoletando la información necesario
-       $comentarios = Comentario::where('leccion_id', '=', $leccion_id)->orderBy('created_at','DESC')->get();
+        //Recolectando la información necesario
+        $comentarios = Comentario::where('leccion_id', '=', $leccion_id)->orderBy('created_at','DESC')->get();
        foreach ($comentarios as $comentario) {
             $comentario->user;
             $fecha = $comentario->created_at->diffForHumans();
             $comentario->dateCarbon = $fecha;
        }
-       echo json_encode($comentarios);
-
-
-
+       return json_encode($comentarios);
     }
 
 }

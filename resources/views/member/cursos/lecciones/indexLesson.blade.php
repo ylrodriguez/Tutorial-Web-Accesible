@@ -137,10 +137,8 @@
 	<div class="col-md-4" style="padding-right:0.9%; padding-left: 0.2%">
 		<div class="col-md-12" style="background-color: transparent">	<h2>Comentarios</h2></div>
 		<div class="col-md-12">
-			<div class="panel panel-default" style="border-color: #2C3E50; max-height: 479.094px;overflow-y: scroll;">
+			<div class="panel panel-default" style="border-color: #2C3E50; max-height: 500px;overflow-y: scroll;">
 				<div class="panel-body panel-body-chat" hidden id="panelBody-comentarios"style="@if (Auth::user()->discapacidad == "daltonismo" || Auth::user()->discapacidad =="ceguera")background-color: #ECECEC; @else background-color: #375A7F; @endif; padding-top: 10px; padding-top: 10px; padding-bottom: 10px;">
-
-					
 				</div>
 			</div>
 		</div>

@@ -17,7 +17,7 @@
 // -----Vista principal
 	    Route::get('/', function () {
 	    if(Auth::check()){return Redirect::to('member');}
-    	return view('welcome2');
+    	return view('welcome');
 		});
 
 // -----Autenticación
