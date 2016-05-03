@@ -36,7 +36,10 @@
                     <div class="panel-body">
                          <div class="col-md-12">
 
-                        {!! Form::open(['route' =>['admin.cursos.update',$curso], 'method' => 'PUT', 'files' => true]) !!}
+                         @include('flash::message') <!-- Para incluir en la plantilla flash -->
+                         @include('admin.template.partials.errors')  <!-- Agregar errores -->
+
+                        {!! Form::open(['route' =>['admin.cursos.update',$curso,'section' => 'editarCurso'], 'method' => 'PUT', 'files' => true]) !!}
                         
                         {{-- Nombre --}}
                           <div class="row">
@@ -93,6 +96,7 @@
 @section('js')
 
     <script>
+      $('.alert').delay(8000).slideUp(1000);
       $('#panelEdicion').fadeIn(600);
 
       $("#titulo").keyup(function () {

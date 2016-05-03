@@ -66,7 +66,7 @@
     <script>
       $('#panelCursos').fadeIn(600);
       $('.panel-cursos').slideToggle(1500);
-      $('.alert').delay(4000).slideUp(1000);
+      $('.alert').delay(8000).slideUp(1000);
     </script>
 
 

@@ -30,9 +30,12 @@
             <div class="panel-body">
              <div class="col-md-12">
 
+            @include('flash::message') <!-- Para incluir en la plantilla flash -->
+            @include('admin.template.partials.errors')  <!-- Agregar errores -->
+
               {!! Form::open(['route' =>'admin.cursos.store', 'method' => 'POST', 'files' => true]) !!}
               
-              {{-- Nombre --}}
+              {{-- Titulo --}}
               <div class="row">
                 <div class="form-group col-md-7">
                   {!! Form::label('titulo','Titulo del nuevo curso') !!}
@@ -40,6 +43,7 @@
                 </div>
               </div>
 
+               {{-- Descripción --}}
               <div class="row">
                 <div class="form-group col-md-7">
                   {!! Form::label('descripcion','Descripción breve del curso') !!}
@@ -86,6 +90,10 @@
 
 {{-- Javascript --}}
 @section('js')
+
+<script type="text/javascript">
+      $('.alert').delay(8000).slideUp(1000);
+    </script>
 
 <script>
   $('#panelEdicion').fadeIn(600);

@@ -10,6 +10,7 @@ use App\Curso;
 use Laracasts\Flash\Flash;
 use Illuminate\Support\Facades\Auth;
 use Carbon\Carbon;
+use App\Http\Requests\CursoRequest;
 
 class CursosController extends Controller
 {
@@ -71,7 +72,7 @@ class CursosController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(CursoRequest $request)
     {
         $curso = new Curso($request->all());
 
@@ -121,7 +122,7 @@ class CursosController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(CursoRequest $request, $id)
     {
         $curso = Curso::find($id);
 

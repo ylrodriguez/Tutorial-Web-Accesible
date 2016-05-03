@@ -45,7 +45,7 @@
                         <label for="nombre" class="col-md-4 control-label">Nombre</label>
 
                         <div class="col-md-7">
-                            <input type="text" class="form-control" name="nombre" id="nombre" value="{{ old('nombre') }}">
+                            <input type="text" class="form-control" required name="nombre" id="nombre" value="{{ old('nombre') }}">
 
                             @if ($errors->has('nombre'))
                             <span class="help-block">
@@ -59,7 +59,7 @@
                         <label for="email" class="col-md-4 control-label">Correo electrónico</label>
 
                         <div class="col-md-7">
-                            <input type="email" class="form-control" name="email" id="email" value="{{ old('email') }}">
+                            <input type="email" class="form-control" required name="email" id="email" value="{{ old('email') }}">
 
                             @if ($errors->has('email'))
                             <span class="help-block">
@@ -73,7 +73,7 @@
                         <label for="username" class="col-md-4 control-label">Nombre de usuario</label>
 
                         <div class="col-md-7">
-                            <input type="text" class="form-control" name="username" id="username" value="{{ old('username') }}">
+                            <input type="text" class="form-control" required name="username" id="username" value="{{ old('username') }}">
 
                             @if ($errors->has('username'))
                             <span class="help-block">
