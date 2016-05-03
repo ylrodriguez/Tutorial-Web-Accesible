@@ -27,9 +27,9 @@ $(function ($)
 
     	// Create the html picker skeleton
       	var $fieldset = $("<fieldset class='birthdayPicker'><legend style='font-size:16px; font-weight:bold'>Fecha de nacimiento</legend></fieldset>"),
-        	  $year = $("<select class='form-control birthYear "+options.sizeClass+"' name='"+parentId+"_birth[year]' id='"+parentId+"_birth[year]'></select>"),
-          	$month = $("<select class='form-control birthMonth "+options.sizeClass+"' name='"+parentId+"_birth[month]' id='"+parentId+"_birth[month]'></select>"),
-          	$day = $("<select class='form-control birthDate "+options.sizeClass+"' name='"+parentId+"_birth[day]' id='"+parentId+"_birth[day]'></select>")
+        	  $year = $("<select class='form-control birthYear "+options.sizeClass+"' name='"+parentId+"_birth[year]' id='"+parentId+"_birth[year]' required></select>"),
+          	$month = $("<select class='form-control birthMonth "+options.sizeClass+"' name='"+parentId+"_birth[month]' id='"+parentId+"_birth[month]' required></select>"),
+          	$day = $("<select class='form-control birthDate "+options.sizeClass+"' name='"+parentId+"_birth[day]' id='"+parentId+"_birth[day]' required ></select>")
           	$birthday = $("<input class='birthDay' name='"+parentId+"_birthDay' type='hidden'/>");
 
             $div1 = $("<div class='col-md-2' style='padding-left: 0px; padding-right: 5px' id='div1'><label for='fecha_nac_birth[day]'>Dia</label></div>");

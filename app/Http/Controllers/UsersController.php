@@ -12,6 +12,7 @@ use Illuminate\Support\Facades\Auth;
 use App\Progreso;
 use App\Country;
 use Carbon\Carbon;
+use App\Http\Requests\UserRequest;
 
 class UsersController extends Controller
 {
@@ -63,7 +64,7 @@ class UsersController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(UserRequest $request)
     {
         $user = new User($request->all());
         $user->password = bcrypt($request->password);

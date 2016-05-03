@@ -7,3 +7,5 @@
 			</ul>
 		</div>
 	@endif
+
+	{{-- Directamente conectado con los Request creados, Ejemplo: UserRequest, ComentarioRequest --}}
