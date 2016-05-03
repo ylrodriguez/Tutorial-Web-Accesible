@@ -256,7 +256,7 @@
 				$("#panelPretederminado").show();
 				$(".panelesPerfil").hide();
 
-				$('.alert').delay(2500).slideUp(1200);
+				$('.alert').delay(8000).slideUp(1200);
 				//Cambia el país en el checkbox
 				$('#pais').val('{{$user->pais}}');
 

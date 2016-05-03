@@ -133,9 +133,8 @@ class UsersController extends Controller
        
     }
 
-    public function updateConfiguracion(Request $request)
+    public function updateConfiguracion(UserRequest $request)
     {
-
         //En vez de $request->id tambien se puede: dd(Input::get('id'));
         $user = User::find($request->id);
 
@@ -215,10 +214,8 @@ class UsersController extends Controller
                   $user->save();
 
                    if(Auth::user()->id == $user->id){
-                       Flash::warning('La imagen de perfil  ha sido modificada.');
+                       Flash::warning('La imagen de perfil ha sido modificada.');
                        
-
-
                         if ($user->type == "admin") {
                         return redirect()->route('admin.configuracion.index');   
                         } else {
@@ -258,16 +255,12 @@ class UsersController extends Controller
             case 'None':
                 $tipo = 'Ninguna';
                 break;
-
             case 'BajaVision':
                 $tipo = 'Baja visión';
                 break;
-
             default:
-
                 break;
         }
-
         return $tipo;
     }
   

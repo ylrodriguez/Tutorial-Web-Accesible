@@ -143,7 +143,7 @@
 		</script>
 
 		<script type="text/javascript">
-			$('.alert').delay(10000).slideUp(1000);
+			$('.alert').delay(8000).slideUp(1000);
 		</script>
 
 	

@@ -6,7 +6,7 @@
 
 @section('content')
 	
-	@section('class-panel','col-md-offset-2 col-md-8')
+	@section('class-panel','col-md-offset-1 col-md-10')
 
 	@section('panel-title','Configuración')
 	
@@ -87,25 +87,30 @@
 						</div>
 
 						{{-- Fecha nacimiento --}}
-							<div class ="form-group">
+						<div class="row">
+							<div class ="form-group col-md-12">
 								<div id ="fecha_nac"></div>
 							</div>
+						</div>
 
 
 						{{-- Tipo --}}
-						<label for="tipo">Tipo de usuario</label>
-						<input hidden id="tipo"></input>
-						
-						@if ($user->type == 'admin')
-							{{-- true expr --}}
-							<h3 class="midsize no-margin" style="margin-bottom:10px"><span class="label label-danger" alt="administrador">Administrador</span></h3>
-						@endif
+						<div class="row">
+						<div class="form-group col-md-7">
+							<label for="tipo">Tipo de usuario</label>
+							<input hidden id="tipo"></input>
+							
+							@if ($user->type == 'admin')
+								{{-- true expr --}}
+								<p class="midsize no-margin" style="margin-bottom:10px"><span class="label label-danger" alt="administrador">Administrador</span></p>
+							@endif
 
-						@if ($user->type == 'member')
-							{{-- false expr --}}
-							<h3 class="midsize no-margin" style="margin-bottom:10px"><span class="label label-primary" alt="miembro">Miembro</span></h3>
-						@endif 
-						
+							@if ($user->type == 'member')
+								{{-- false expr --}}
+								<h3 class="midsize no-margin" style="margin-bottom:10px"><span class="label label-primary" alt="miembro">Miembro</span></h3>
+							@endif 
+						</div>
+						</div>
 						{{-- Biografia --}}
 						<div class="row">
 							<div class="form-group col-md-8">
@@ -268,7 +273,7 @@
 				$("#panelPretederminado").show();
 				$(".panelesPerfil").hide();
 
-				$('.alert').delay(2500).slideUp(1200);
+				$('.alert').delay(8000).slideUp(1200);
 				//Cambia el país en el checkbox
 				$('#pais').val('{{$user->pais}}');
 
@@ -312,7 +317,7 @@
 		</script>
 		
 		<script type="text/javascript">
-			$('.alert').delay(2500).slideUp(1200);
+			$('.alert').delay(8000).slideUp(1200);
 		</script>
 		
 
