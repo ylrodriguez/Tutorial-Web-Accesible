@@ -6,14 +6,14 @@
 
 @section('content')
 	
-	@section('class-panel','col-md-offset-2 col-md-8')
+	@section('class-panel','col-md-offset-1 col-md-10')
 
 	@section('panel-title','Editar usuario: ' . $user->nombre)
 	
 
 	<div class="row">
 
-		{{-- Butones --}}
+		{{-- Botones --}}
 		<div class="col-md-3">
 
 			 <div class="col-md-12 no-padding" style="height:180px; margin-bottom: 2em">

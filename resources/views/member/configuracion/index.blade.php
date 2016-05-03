@@ -13,7 +13,7 @@
 
 	<div class="row">
 
-		{{-- Butones --}}
+		{{-- Botones --}}
 		<div class="col-md-3">
 			  <div class="col-md-12 no-padding" style="height:180px; margin-bottom: 2em">
 				<div id="panel-imagen" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding" style="height: 100%">

@@ -35,7 +35,7 @@ class UserRequest extends Request
                     return [];
                     break;
                 case 'imagenPerfil':
-                    return ['imagen' => 'image|required|size:2048'];
+                    return ['imagen' => 'image|required'];
                     break;
             }
         }
