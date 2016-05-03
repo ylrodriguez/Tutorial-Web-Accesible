@@ -31,9 +31,12 @@
                     <div class="panel-body">
                          <div class="col-md-12">
 
+                         @include('flash::message') <!-- Para incluir en la plantilla flash -->
+                         @include('admin.template.partials.errors')  <!-- Agregar errores -->
+
                         {!! Form::open(['route' =>['admin.cursos.lecciones.store','curso_id' => $curso->id], 'method' => 'POST']) !!}
                         
-                        {{-- Nombre --}}
+                        {{-- Titulo --}}
                           <div class="row">
                             <div class="form-group col-md-7">
                             {!! Form::label('titulo','Titulo de la lección') !!}
@@ -111,6 +114,7 @@
 @section('js')
 
     <script>
+      $('.alert').delay(8000).slideUp(1000);
        $('#panelEdicion').fadeIn(600);
 
       $("#titulo").keyup(function () {

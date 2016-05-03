@@ -32,7 +32,11 @@
                          <div class="col-md-12">
                         {!! Form::open(['route' => ['admin.cursos.lecciones.update', $leccion,'curso_id' => $leccion->curso->id], 'method' => 'PUT']) !!}
 
-                        {{-- Nombre --}}
+                          @include('flash::message') <!-- Para incluir en la plantilla flash -->
+                          @include('admin.template.partials.errors')  <!-- Agregar errores -->
+    
+
+                        {{-- Titulo --}}
                           <div class="row">
                             <div class="form-group col-md-7">
                             {!! Form::label('titulo','Titulo de la lección') !!}
@@ -111,6 +115,7 @@
 
     <script>
        $('#panelEdicion').fadeIn(600);
+       $('.alert').delay(8000).slideUp(1000);
 
       $("#titulo").keyup(function () {
         var value = "Editar leccion: " + $(this).val();

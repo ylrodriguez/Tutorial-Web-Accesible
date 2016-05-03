@@ -93,7 +93,7 @@
 
 <script type="text/javascript">
       $('.alert').delay(8000).slideUp(1000);
-    </script>
+</script>
 
 <script>
   $('#panelEdicion').fadeIn(600);

@@ -100,7 +100,7 @@
 
       <script>
         $('#panelLecciones').fadeIn(600);
-        $('.alert').delay(4000).slideUp(1000);
+        $('.alert').delay(8000).slideUp(1000);
 
         function modalLeccion(leccion_id){
           $('.leccionNum').text(leccion_id);

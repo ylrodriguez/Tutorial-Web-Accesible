@@ -13,6 +13,7 @@ use App\Evaluacion;
 use Laracasts\Flash\Flash;
 use Illuminate\Support\Facades\Auth;
 use Carbon\Carbon;
+use App\Http\Requests\LeccionRequest;
 
 class LeccionesController extends Controller
 {
@@ -61,7 +62,7 @@ class LeccionesController extends Controller
      * @return \Illuminate\Http\Response
      */
 
-    public function store(Request $request)
+    public function store(LeccionRequest $request)
     {
         $leccion = new Leccion($request->all());
         $curso = Curso::find($request->curso_id);
@@ -144,7 +145,7 @@ class LeccionesController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-     public function update(Request $request, $id)
+     public function update(LeccionRequest $request, $id)
      {
         //En vez de $request->id tambien se puede: dd(Input::get('id'));
         

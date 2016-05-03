@@ -173,7 +173,7 @@ $leccion_user = Auth::user()->lecciones->where('id',$leccion->id)->first();
 <script>
 	$('#panelLeccion').fadeIn(600);
 	$('#panelBody-comentarios').fadeIn(1000);
-	$('.alert').delay(4000).slideUp(1000);
+	$('.alert').delay(8000).slideUp(1000);
 	var code ='{{$leccion->teoria}}';
 
 	$('#divTest').append(code);
