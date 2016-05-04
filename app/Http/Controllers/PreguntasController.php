@@ -12,6 +12,7 @@ use App\Pregunta;
 use App\Http\Controllers\Controller;
 use Laracasts\Flash\Flash;
 use Illuminate\Support\Facades\Auth;
+use App\Http\Requests\PreguntaRequest;
 
 class PreguntasController extends Controller
 {
@@ -38,11 +39,11 @@ class PreguntasController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(PreguntaRequest $request)
     {
+
         $leccion = Leccion::find($request->leccion_id);
         
-
         $pregunta = new Pregunta($request->all()); 
         $pregunta->evaluacion_id=  $leccion->evaluaciones[0]->id;
         $pregunta->save();
