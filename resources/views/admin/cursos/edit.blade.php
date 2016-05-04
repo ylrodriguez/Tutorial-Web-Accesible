@@ -41,7 +41,7 @@
 
                         {!! Form::open(['route' =>['admin.cursos.update',$curso,'section' => 'editarCurso'], 'method' => 'PUT', 'files' => true]) !!}
                         
-                        {{-- Nombre --}}
+                        {{-- Titulo --}}
                           <div class="row">
                             <div class="form-group col-md-7">
                             {!! Form::label('titulo','Titulo del curso') !!}

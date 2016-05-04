@@ -83,7 +83,7 @@
 									<p>{{$evaluacion->descripcion}}</p>
 									<hr/>
 
-									{!! Form::open(['route' => ['member.cursos.evaluaciones.saveEvaluacion',$evaluacion->id, 'leccion_id' => $leccion->id, 'num' => $num, 'slug' => $leccion->slug], 'method' => 'POST']) !!}
+									{!! Form::open(['route' => ['admin.cursos.evaluaciones.saveEvaluacion',$evaluacion->id, 'leccion_id' => $leccion->id, 'num' => $num, 'slug' => $leccion->slug], 'method' => 'POST']) !!}
 
 									@foreach ($preguntas as $pregunta)
 									<?php $i++;?>

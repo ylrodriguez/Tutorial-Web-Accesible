@@ -13,6 +13,7 @@ use App\Opcion;
 use App\Http\Controllers\Controller;
 use Laracasts\Flash\Flash;
 use Illuminate\Support\Facades\Auth;
+use App\Http\Requests\EvaluacionRequest;
 
 
 class EvaluacionesController extends Controller
@@ -68,7 +69,7 @@ class EvaluacionesController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(EvaluacionRequest $request, $id)
     {   
         //Llama al controlador correcto
         if($id == 'create'){return $this->create($request);}
@@ -92,7 +93,7 @@ class EvaluacionesController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function create(Request $request)
+    public function create(EvaluacionRequest $request)
     {
         $leccion = Leccion::find($request->leccion_id);
         $evaluacion = new Evaluacion($request->all());
