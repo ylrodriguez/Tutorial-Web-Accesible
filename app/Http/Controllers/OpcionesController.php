@@ -13,6 +13,7 @@ use App\Pregunta;
 use App\Opcion;
 use Laracasts\Flash\Flash;
 use Illuminate\Support\Facades\Auth;
+use App\Http\Requests\OpcionRequest;
 
 class OpcionesController extends Controller
 {
@@ -36,7 +37,7 @@ class OpcionesController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(OpcionRequest $request)
     {
         
         $opcion = new Opcion($request->all()); 
