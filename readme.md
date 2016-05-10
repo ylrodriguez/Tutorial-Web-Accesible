@@ -6,6 +6,3 @@ El presente proyecto es un aplicativo web que cumple con los estándares de acce
 
 Esta aplicación fue desarrollada por Yojhan Rodríguez y Jeisson Sindicue, estudiantes de la Universidad Distrital Francisco José de Caldas en Bogotá - Colombia.
 
-## Licencia
-
-La presente aplicación es de código abierto bajo la licencia GNU (General Public License).
