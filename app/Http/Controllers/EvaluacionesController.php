@@ -28,12 +28,15 @@ class EvaluacionesController extends Controller
             $evaluacion->leccion;
             $evaluacion->users;
             $puntajePromedio = 0;
-            foreach ( $evaluacion->users as $user ) {
+            if(count($evaluacion->users) > 0){
+                foreach ( $evaluacion->users as $user ) {
                 $puntajePromedio += $user->pivot->puntaje;
-            }
+                }
 
-            $puntajePromedio = $puntajePromedio/count($evaluacion->users);
-            $response[]  = array($evaluacion->leccion->titulo,$puntajePromedio);
+                $puntajePromedio = $puntajePromedio/count($evaluacion->users);
+                $response[]  = array($evaluacion->leccion->titulo,$puntajePromedio);
+            }
+            
         }
 
         return json_encode($response);
