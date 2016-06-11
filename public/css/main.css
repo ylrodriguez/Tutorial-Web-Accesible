@@ -9,6 +9,7 @@ body {
   /* Margin bottom by footer height */
   background: url('../img/scrached.png'); 
   background-repeat:repeat;
+  background-color: #344250;
 }
 
 .no-margin{

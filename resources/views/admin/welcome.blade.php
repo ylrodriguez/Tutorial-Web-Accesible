@@ -20,7 +20,8 @@
          @include('flash::message') <!-- Para incluir en la plantilla flash -->
          @include('admin.template.partials.errors')  <!-- Agregar errores -->
 
-         <div class="jumbotron myDiv" style="margin-bottom: 0px; border-radius:0">
+
+         <div class="jumbotron myDiv" style="margin-bottom: 0px; border-radius:0;">
           <h1>Panel de admnistración</h1>
           <h2>¡Bienvenido al panel de administración!</h2>
           <p >Acá encontrarás todo tipo de información pertinente para una correcta administración del tutorial web. Las opciones son bastantes amplias; desde editar simplemente el nombre de un usuario hasta crear un nuevo curso desde cero con sus respectivas lecciones. Disfruta de tus privilegios como administrador y ayuda a la comunidad disfrutar de un tutorial de mayor calidad.</p>
@@ -32,6 +33,7 @@
          <div class="col-md-12">
           <div class="panel panel-default" style="border-color: #f5f5f5">
             <div class="panel-body" style="background-color: #FFFFFF">
+
               {{-- Usuarios --}}
               <div class="col-lg-3 col-md-6 col-sm-6">
                 <div class="panel  panel-babyblue">
@@ -128,14 +130,29 @@
               <div class="col-md-12"><hr style="margin-top: 0; border-top: 1px solid #d8d8d8;" /></div>
 
               <div class="col-md-12">
+
                 <div class="col-lg-9 col-md-8 col-sm-8 col-xs-12">
-                  <div id="container" style="width:100%; height:380px;"></div>
-                  <div class="col-md-12"><hr style="margin-top: 0; border-top: 1px solid #375A7F;" /></div>
-                  <div id="container2" style="width:100%; height:380px;"></div>
-                  <div class="col-md-12"><hr style="margin-top: 0; border-top: 1px solid #375A7F;" /></div>
-                  <div id="container3" style="width:100%; height:380px;"></div>
-                  <div class="col-md-12"><hr style="margin-top: 0; border-top: 1px solid #375A7F;" /></div>
-                  <div id="container4" style="width:100%; height:380px; margin-bottom: 20px"></div>
+                 
+                  <div class="col-md-12">
+                     <div id="container" style="width:100%; height:380px;"></div>
+                  </div> {{-- 1 --}}
+                  
+                  <div class="col-md-12">
+                    <hr style="margin-top: 0; border-top: 1px solid #375A7F;" />
+                    <div id="container2" style="width:100%; height:380px;"></div>
+                  </div>  {{-- 1 --}}
+
+
+                  <div class="col-md-12">
+                    <hr style="margin-top: 0; border-top: 1px solid #375A7F;" />
+                    <div id="container3" style="width:100%; height:380px;"></div>
+                  </div> {{-- 3 --}}
+
+                  <div class="col-md-12">
+                    <hr style="margin-top: 0; border-top: 1px solid #375A7F;"/>
+                    <div id="container4" style="width:100%; height:380px; margin-bottom: 20px"></div>
+                  </div>  {{-- 1 --}}
+
                 </div>
 
 
@@ -151,7 +168,6 @@
                     <!-- END CBOX -->
                   </section>   
                 </div>
-
 
               </div>
 
