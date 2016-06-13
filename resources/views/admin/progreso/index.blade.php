@@ -237,9 +237,14 @@
 	    					enabled: true,
 	    					distance: -50,
 	    					style: {
+	    						@if (Auth::user()->discapacidad != "daltonismo" && Auth::user()->discapacidad !="ceguera")
 	    						fontWeight: 'bold',
 	    						color: 'white',
 	    						textShadow: '0px 1px 2px black'
+	    						@else
+	    						fontWeight: 'bold',
+	    						color: 'black'
+	    						@endif
 	    					}
 	    				},
 	    				startAngle: -90,
@@ -289,10 +294,15 @@
         					enabled: true,
         					distance: -50,
         					style: {
-        						fontWeight: 'bold',
-        						color: 'white',
-        						textShadow: '0px 1px 2px black'
-        					}
+	    						@if (Auth::user()->discapacidad != "daltonismo" && Auth::user()->discapacidad !="ceguera")
+	    						fontWeight: 'bold',
+	    						color: 'white',
+	    						textShadow: '0px 1px 2px black'
+	    						@else
+	    						fontWeight: 'bold',
+	    						color: 'black'
+	    						@endif
+	    					}
         				},
         				startAngle: -90,
         				endAngle: 90,
