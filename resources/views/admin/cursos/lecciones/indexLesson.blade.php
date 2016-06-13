@@ -188,7 +188,7 @@ $leccion_user = Auth::user()->lecciones->where('id',$leccion->id)->first();
 	
 
 	function finalizarLeccion(){
-		videoRunORFin('videoFinished');
+		videoRunORFin('videoFinalizar');
 		$('#botonFinlec').prop('disabled',true);
 		$('#botonFinlec').text('La lección ya ha sido finalizada');
 	}
@@ -371,6 +371,9 @@ $leccion_user = Auth::user()->lecciones->where('id',$leccion->id)->first();
     			type: 'get',
     			success:  function (response) {
     				console.log(response);
+    				if(evento == "videoFinalizar"){
+    					videoRunORFin('videoFinished');
+    				}
     				if(evento == "videoFinished"){
     					$('#beforetest').hide();
     					$('#evaluacionPanel').show();
