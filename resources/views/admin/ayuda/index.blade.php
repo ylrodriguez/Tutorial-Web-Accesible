@@ -46,7 +46,7 @@
             <p>La barra de navegación se encuentra en la parte superior de la ventana principal y facilita la exploración de diferentes componentes del tutorial.</p>
           </div>
           <div class="col-md-12 margin-bottom">
-            <a href="http://arqtutorial:8080/img/guidelines-admin/2barranavegacion.png" target="_blank"><span class="sr-only">Abrir imagen en nueva pestaña</span>
+            <a  href="/img/guidelines-admin/2barranavegacion.png" target="_blank"><span class="sr-only">Abrir imagen en nueva pestaña</span>
              <img src="/img/guidelines-admin/2barranavegacion.png" class="img-responsive img-rounded" alt="Imagen de la barra de navegación" style="margin-top: 1.5%; max-height:100px;"></a>
            </div>
 
@@ -76,7 +76,7 @@
 
           <div class="col-md-12 margin-bottom">
             <div class="col-md-8">
-              <a href="http://arqtutorial:8080/img/guidelines-admin/3paginaprincipal.png" target="_blank"><span class="sr-only">Abrir imagen en nueva pestaña</span>
+              <a  href="/img/guidelines-admin/3paginaprincipal.png" target="_blank"><span class="sr-only">Abrir imagen en nueva pestaña</span>
                 <img src="/img/guidelines-admin/3paginaprincipal.png" class="img-responsive img-rounded" alt="Imagen de la página de inicio y sus componentes" style="margin-top: 1.5%; max-height:500px;"></a>
               </div>
               <div class="col-md-4"><p>En la página principal se encuentran cuatro botones que muestran información general. El primer boton de <a href="#usuarios">Usuarios</a> se dirige al módulo de usuarios y muestra el número de usuarios que se encuentran en el tutorial web. El botón de <a href="#cursos">Cursos</a> muestra el número de cursos activos y se dirige a la lista de cursos. El botón de <a href="#lecciones">Lecciones</a> muestra el número de lecciones en todo el tutorial y se dirige a la lista de lecciones Por último el boton de <a href="#leccionescomentario">Comentarios</a> muestra el total de comentarios en todas las lecciones</p>
@@ -96,7 +96,7 @@
 
             <div class="col-md-12 margin-bottom">
               <div class="col-md-8">
-                <a href="http://arqtutorial:8080/img/guidelines-admin/4usuarios.png" target="_blank"><span class="sr-only">Abrir imagen en nueva pestaña</span>
+                <a  href="/img/guidelines-admin/4usuarios.png" target="_blank"><span class="sr-only">Abrir imagen en nueva pestaña</span>
                   <img src="/img/guidelines-admin/4usuarios.png" class="img-responsive img-rounded" alt="Imagen de lista de usuarios" style="margin-top: 1.5%; max-height:500px;"></a>
                 </div>
                 <div class="col-md-4">
@@ -132,7 +132,7 @@
 
               <div class="col-md-12 margin-bottom">
                 <div class="col-md-8">
-                  <a href="http://arqtutorial:8080/img/guidelines-admin/5cursos.png" target="_blank"><span class="sr-only">Abrir imagen en nueva pestaña</span>
+                  <a  href="/img/guidelines-admin/5cursos.png" target="_blank"><span class="sr-only">Abrir imagen en nueva pestaña</span>
                     <img src="/img/guidelines-admin/5cursos.png" class="img-responsive img-rounded" alt="Imagen del modulo de cursos" style="margin-top: 1.5%; max-height:500px;"></a>
                   </div>
                   <div class="col-md-4">
@@ -153,7 +153,7 @@
 
                 <div class="col-md-12 margin-bottom">
                   <div class="col-md-8">
-                    <a href="http://arqtutorial:8080/img/guidelines-admin/6lecciones.png" target="_blank"><span class="sr-only">Abrir imagen en nueva pestaña</span>
+                    <a  href="/img/guidelines-admin/6lecciones.png" target="_blank"><span class="sr-only">Abrir imagen en nueva pestaña</span>
                       <img src="/img/guidelines-admin/6lecciones.png" class="img-responsive img-rounded" alt="Imagen del modulo de lecciones" style="margin-top: 1.5%; max-height:500px;"></a>
                     </div>
                     <div class="col-md-4">
@@ -167,7 +167,7 @@
                    
                     <div class="col-md-12 margin-bottom">
                       <div class="col-md-8">
-                    <a href="http://arqtutorial:8080/img/guidelines-admin/6.1agregarleccion.png" target="_blank"><span class="sr-only">Abrir imagen en nueva pestaña</span>
+                    <a  href="/img/guidelines-admin/6.1agregarleccion.png" target="_blank"><span class="sr-only">Abrir imagen en nueva pestaña</span>
                       <img src="/img/guidelines-admin/6.1agregarleccion.png" class="img-responsive img-rounded center-block" alt="Imagen del modulo de añadir leccion" style="margin-top: 1.5%; max-height:500px;"></a>
                     </div>
                     <div class="col-md-4">
@@ -186,7 +186,7 @@
                    
                     <div class="col-md-12 margin-bottom">
                       <div class="col-md-8">
-                    <a href="http://arqtutorial:8080/img/guidelines-admin/6.2vistaprevia.png" target="_blank"><span class="sr-only">Abrir imagen en nueva pestaña</span>
+                    <a  href="/img/guidelines-admin/6.2vistaprevia.png" target="_blank"><span class="sr-only">Abrir imagen en nueva pestaña</span>
                       <img src="/img/guidelines-admin/6.2vistaprevia.png" class="img-responsive img-rounded center-block" alt="Imagen del modulo de vista previa de la leccion" style="margin-top: 1.5%; max-height:500px;"></a>
                     </div>
                     <div class="col-md-4">
@@ -203,7 +203,7 @@
                    
                     <div class="col-md-12 margin-bottom">
                       <div class="col-md-8">
-                    <a href="http://arqtutorial:8080/img/guidelines-admin/6.3comentarios.png" target="_blank"><span class="sr-only">Abrir imagen en nueva pestaña</span>
+                    <a  href="/img/guidelines-admin/6.3comentarios.png" target="_blank"><span class="sr-only">Abrir imagen en nueva pestaña</span>
                       <img src="/img/guidelines-admin/6.3comentarios.png" class="img-responsive img-rounded center-block" alt="Imagen del panel de comentarios" style="margin-top: 1.5%; max-height:500px;"></a>
                     </div>
                     <div class="col-md-4">
@@ -221,7 +221,7 @@
                    
                     <div class="col-md-12 margin-bottom">
                       <div class="col-md-8">
-                    <a href="http://arqtutorial:8080/img/guidelines-admin/6.4evaluaciones.png" target="_blank"><span class="sr-only">Abrir imagen en nueva pestaña</span>
+                    <a  href="/img/guidelines-admin/6.4evaluaciones.png" target="_blank"><span class="sr-only">Abrir imagen en nueva pestaña</span>
                       <img src="/img/guidelines-admin/6.4evaluaciones.png" class="img-responsive img-rounded center-block" alt="Imagen del panel de evaluaciones" style="margin-top: 1.5%; max-height:500px;"></a>
                     </div>
                     <div class="col-md-4">
@@ -244,7 +244,7 @@
 
               <div class="col-md-12 margin-bottom">
                 <div class="col-md-8">
-                  <a href="http://arqtutorial:8080/img/guidelines-admin/7progreso.png" target="_blank"><span class="sr-only">Abrir imagen en nueva pestaña</span>
+                  <a  href="/img/guidelines-admin/7progreso.png" target="_blank"><span class="sr-only">Abrir imagen en nueva pestaña</span>
                     <img src="/img/guidelines-admin/7progreso.png" class="img-responsive img-rounded center-block" alt="Imagen del modulo de progreso" style="margin-top: 1.5%; max-height:500px;"></a>
                   </div>
                   <div class="col-md-4">
@@ -266,7 +266,7 @@
 
               <div class="col-md-12 margin-bottom">
                 <div class="col-md-8">
-                  <a href="http://arqtutorial:8080/img/guidelines-admin/8chat.png" target="_blank"><span class="sr-only">Abrir imagen en nueva pestaña</span>
+                  <a  href="/img/guidelines-admin/8chat.png" target="_blank"><span class="sr-only">Abrir imagen en nueva pestaña</span>
                     <img src="/img/guidelines-admin/8chat.png" class="img-responsive img-rounded center-block" alt="Imagen del modulo de chat" style="margin-top: 1.5%; max-height:500px;"></a>
                   </div>
                   <div class="col-md-4">
@@ -306,7 +306,7 @@
 
                   <div class="col-md-12 margin-bottom">
                     <div class="col-md-8">
-                      <a href="http://arqtutorial:8080/img/guidelines-admin/10.1perfil.png" target="_blank"><span class="sr-only">Abrir imagen en nueva pestaña</span>
+                      <a  href="/img/guidelines-admin/10.1perfil.png" target="_blank"><span class="sr-only">Abrir imagen en nueva pestaña</span>
                         <img src="/img/guidelines-admin/10.1perfil.png" class="img-responsive img-rounded center-block" alt="Imagen del modulo de perfil de usuario" style="margin-top: 1.5%; max-height:500px;"></a>
                       </div>
                       <div class="col-md-4">
@@ -321,7 +321,7 @@
                   
                   <div class="col-md-12 margin-bottom">
                     <div class="col-md-8">
-                      <a href="http://arqtutorial:8080/img/guidelines-admin/10.2configuracion.png" target="_blank"><span class="sr-only">Abrir imagen en nueva pestaña</span>
+                      <a  href="/img/guidelines-admin/10.2configuracion.png" target="_blank"><span class="sr-only">Abrir imagen en nueva pestaña</span>
                         <img src="/img/guidelines-admin/10.2configuracion.png" class="img-responsive img-rounded center-block" alt="Imagen del modulo de configuracion" style="margin-top: 1.5%; max-height:500px;"></a>
                       </div>
                       <div class="col-md-4">

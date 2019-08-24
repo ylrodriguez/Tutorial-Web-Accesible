@@ -246,7 +246,7 @@ $leccion_user = Auth::user()->lecciones->where('id',$leccion->id)->first();
 
 	function agregarComentario(comentario,username,imagen,coment_id,dateCarbon,propio){
 		var toAppend = 
-		' <div class="row chat_message relative small-padding nueva-fila" hidden><div class="col-xs-special-1-5 no-padding relative col-xs-2 col-md-1"><div class="box"><a class="right-space" target="_blank" href="http://arqtutorial:8080/member/perfil/'+username+'"><img height="30" alt="Imagen de perfil: '+username+'"src="/img/profiles/'+imagen+'" style="max-width: 30px"></a></div></div><div class="col-xs-11 no-padding  be-small"><div class="box" style="padding-left:10px"><a target="_blank" href="http://arqtutorial:8080/member/perfil/'+username+'">'+username+'</a><span>: '+comentario+'</span></div></div></div><div class="row nueva-fila  shadow-border" hidden style="margin-bottom: 10px"><div class="col-xs-8 col-xs-offset-1" ><p class="no-margin be-extrasmall blue-accesible">'+dateCarbon+'<span class="glyphicon glyphicon-time" style="padding-left: 5px;"></span></p></div>'; //92413D
+		' <div class="row chat_message relative small-padding nueva-fila" hidden><div class="col-xs-special-1-5 no-padding relative col-xs-2 col-md-1"><div class="box"><a class="right-space" target="_blank"  href="/member/perfil/'+username+'"><img height="30" alt="Imagen de perfil: '+username+'"src="/img/profiles/'+imagen+'" style="max-width: 30px"></a></div></div><div class="col-xs-11 no-padding  be-small"><div class="box" style="padding-left:10px"><a target="_blank"  href="/member/perfil/'+username+'">'+username+'</a><span>: '+comentario+'</span></div></div></div><div class="row nueva-fila  shadow-border" hidden style="margin-bottom: 10px"><div class="col-xs-8 col-xs-offset-1" ><p class="no-margin be-extrasmall blue-accesible">'+dateCarbon+'<span class="glyphicon glyphicon-time" style="padding-left: 5px;"></span></p></div>'; //92413D
 
 
 		if(propio){
@@ -273,7 +273,7 @@ $leccion_user = Auth::user()->lecciones->where('id',$leccion->id)->first();
     		$.ajax({
     			dataType: 'json',
     			data: dataEnviar,
-    			url: 'http://arqtutorial:8080/member/comentarios/'+$coment_id+'/destroy',
+    			url: ' /member/comentarios/'+$coment_id+'/destroy',
     			type: 'get',
     			success:  function (response) {
     				console.log(response);
@@ -374,7 +374,7 @@ $leccion_user = Auth::user()->lecciones->where('id',$leccion->id)->first();
 
     		$.ajax({
     			data: dataEnviar,
-    			url: 'http://arqtutorial:8080/member/cursos/event/'+evento,
+    			url: ' /member/cursos/event/'+evento,
     			type: 'get',
     			success:  function (response) {
     				console.log(response);

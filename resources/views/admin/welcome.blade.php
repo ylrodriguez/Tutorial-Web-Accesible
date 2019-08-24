@@ -94,7 +94,7 @@
                       </div>
                     </div>
                   </div>
-                  <a href="http://arqtutorial:8080/admin/cursos/lecciones/3">
+                  <a  href="/admin/cursos/lecciones/3">
                     <div class="panel-footer">
                       <span class="pull-left">Ver detalles</span>
                       <span class="pull-right"><i class="glyphicon glyphicon-circle-arrow-right"></i></span>
@@ -117,7 +117,7 @@
                       </div>
                     </div>
                   </div>
-                  <a href="http://arqtutorial:8080/admin/cursos/lecciones/3">
+                  <a  href="/admin/cursos/lecciones/3">
                     <div class="panel-footer">
                       <span class="pull-left">Ver detalles</span>
                       <span class="pull-right"><i class="glyphicon glyphicon-circle-arrow-right"></i></span>

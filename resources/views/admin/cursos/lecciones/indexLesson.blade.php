@@ -239,7 +239,7 @@ $leccion_user = Auth::user()->lecciones->where('id',$leccion->id)->first();
 
 	function agregarComentario(comentario,username,imagen,coment_id,dateCarbon){
 		var toAppend = 
-		' <div class="row chat_message relative small-padding nueva-fila" hidden><div class="col-xs-special-1-5 no-padding relative col-xs-2 col-md-1"><div class="box"><a class="right-space" target="_blank" href="http://arqtutorial:8080/admin/perfil/'+username+'"><img height="30" alt="Imagen de perfil"src="/img/profiles/'+imagen+'" style="max-width: 30px"></a></div></div><div class="col-xs-11 no-padding  be-small"><div class="box" style="padding-left:10px"><a target="_blank" href="http://arqtutorial:8080/admin/perfil/'+username+'">'+username+'</a><span>: '+comentario+'</span></div></div></div><div class="row nueva-fila  shadow-border" hidden style="margin-bottom: 10px"><div class="col-xs-8 col-xs-offset-1" ><p class="no-margin blue-accesible be-extrasmall">'+dateCarbon+'<span class="glyphicon glyphicon-time" style="padding-left: 5px;"></span></p></div><div class="col-xs-3" style="padding-right: 2px; margin-bottom:2px"><button title="Eliminar comentario" type="button" onclick="eliminarComentario(this)" value="'+coment_id+'" class="btn  btn-xs pull-right" style="margin-right: 5px; margin-top: 0; padding-left: 4px;padding-right: 4px; background-color: transparent"><span class="sr-only">Eliminar este comentario</span><span class="glyphicon glyphicon-trash"></span></button></div></div>';
+		' <div class="row chat_message relative small-padding nueva-fila" hidden><div class="col-xs-special-1-5 no-padding relative col-xs-2 col-md-1"><div class="box"><a class="right-space" target="_blank"  href="/admin/perfil/'+username+'"><img height="30" alt="Imagen de perfil"src="/img/profiles/'+imagen+'" style="max-width: 30px"></a></div></div><div class="col-xs-11 no-padding  be-small"><div class="box" style="padding-left:10px"><a target="_blank"  href="/admin/perfil/'+username+'">'+username+'</a><span>: '+comentario+'</span></div></div></div><div class="row nueva-fila  shadow-border" hidden style="margin-bottom: 10px"><div class="col-xs-8 col-xs-offset-1" ><p class="no-margin blue-accesible be-extrasmall">'+dateCarbon+'<span class="glyphicon glyphicon-time" style="padding-left: 5px;"></span></p></div><div class="col-xs-3" style="padding-right: 2px; margin-bottom:2px"><button title="Eliminar comentario" type="button" onclick="eliminarComentario(this)" value="'+coment_id+'" class="btn  btn-xs pull-right" style="margin-right: 5px; margin-top: 0; padding-left: 4px;padding-right: 4px; background-color: transparent"><span class="sr-only">Eliminar este comentario</span><span class="glyphicon glyphicon-trash"></span></button></div></div>';
 
 		$('#panelBody-comentarios').append(toAppend);
 
@@ -259,7 +259,7 @@ $leccion_user = Auth::user()->lecciones->where('id',$leccion->id)->first();
     		$.ajax({
     			dataType: 'json',
     			data: dataEnviar,
-    			url: 'http://arqtutorial:8080/admin/comentarios/'+$coment_id+'/destroy',
+    			url: ' /admin/comentarios/'+$coment_id+'/destroy',
     			type: 'get',
     			success:  function (response) {
     				console.log(response);
@@ -367,7 +367,7 @@ $leccion_user = Auth::user()->lecciones->where('id',$leccion->id)->first();
 
     		$.ajax({
     			data: dataEnviar,
-    			url: 'http://arqtutorial:8080/admin/cursos/event/'+evento,
+    			url: ' /admin/cursos/event/'+evento,
     			type: 'get',
     			success:  function (response) {
     				console.log(response);

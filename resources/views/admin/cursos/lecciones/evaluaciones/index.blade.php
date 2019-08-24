@@ -134,7 +134,7 @@
         $.ajax({
           dataType: 'json',
           data: dataEnviar,
-          url:  'http://arqtutorial:8080/admin/cursos/lecciones/evaluaciones/'+$leccion_id,
+          url:  ' /admin/cursos/lecciones/evaluaciones/'+$leccion_id,
           type: 'get',
           success:  function (obj) {
             console.log('Cargando modal..');
@@ -148,7 +148,7 @@
                   
                   $('#descripcion').text(obj.leccion.evaluaciones[0].descripcion);
 
-                  $url = 'http://arqtutorial:8080/admin/cursos/lecciones/evaluaciones/update';
+                  $url = ' /admin/cursos/lecciones/evaluaciones/update';
                   $cursoID =obj.leccion.curso_id;
                   $url += '?curso_id='+obj.leccion.curso_id;
                   $url += '&leccion_id='+obj.leccion.id;
@@ -165,7 +165,7 @@
                   $('#li-pregunta').hide();
                   $('#myModalLabel').text('Crear evaluación: '+obj.leccion.titulo);
 
-                  $url = 'http://arqtutorial:8080/admin/cursos/lecciones/evaluaciones/create';
+                  $url = ' /admin/cursos/lecciones/evaluaciones/create';
                   $url += '?curso_id='+obj.leccion.curso_id;
                   $url += '&leccion_id='+obj.leccion.id;
                   $('#div-descripcion form').attr('action',$url);
@@ -196,7 +196,7 @@
               {{-- Cambiar de url en el boton de pregunta --}}
               $('#tabla-preguntas').bootstrapTable('refresh', {
 
-               url: 'http://arqtutorial:8080/admin/cursos/lecciones/evaluaciones/preguntas/'+$leccion_id
+               url: ' /admin/cursos/lecciones/evaluaciones/preguntas/'+$leccion_id
              });
               completeTable();
             }
@@ -248,7 +248,7 @@
 
         $.ajax({
           data: dataEnviar,
-          url: 'http://arqtutorial:8080/admin/cursos/lecciones/evaluaciones/preguntas/'+$pregunta_id,
+          url: ' /admin/cursos/lecciones/evaluaciones/preguntas/'+$pregunta_id,
           type: 'delete',
           success:  function (response) {
             console.log(response);
@@ -282,7 +282,7 @@
                 dataType: 'json',
                 data: dataEnviar,
                 cache: false,
-                url: 'http://arqtutorial:8080/admin/cursos/lecciones/evaluaciones/preguntas/'+$leccion_id,
+                url: ' /admin/cursos/lecciones/evaluaciones/preguntas/'+$leccion_id,
                 type: 'get',
                 success:  function (response) {
                   console.log('> > Respuesta: ');

@@ -26,7 +26,7 @@
                             </div>
 
                             <div class="col-md-2">
-                                <a href="http://arqtutorial:8080/">
+                                <a href="/">
                                     <img id="img-imagen" src="/img/profiles/default.png" class="img-responsive img-rounded " alt="Volver a página de inicio" style="margin-top: 1em">
                                 </a>
                             </div>

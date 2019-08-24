@@ -6,3 +6,11 @@ El presente proyecto es un aplicativo web que cumple con los estándares de acce
 
 Esta aplicación fue desarrollada por Yojhan Rodríguez y Jeisson Sindicue, estudiantes de la Universidad Distrital Francisco José de Caldas en Bogotá - Colombia.
 
+
+## Configuraciones
+Base de datos: Query para MySQL en la carpeta queries
+Usuarios:   - Usuario admin: Yojhanr95@gmail.com
+            - Se puede ver el correo fácilmente de todos los usuarios en el query mencionado.
+            - Todos los usuarios tienen clave 12345678
+
+

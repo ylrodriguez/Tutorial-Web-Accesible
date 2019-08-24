@@ -65,7 +65,7 @@
         $('#myModalLabelopciones').text('');
 
         $('#tabla-opciones').bootstrapTable('refresh', {
-        url: 'http://arqtutorial:8080/admin/cursos/lecciones/evaluaciones/preguntas/opciones/'+$pregunta_id
+        url: ' /admin/cursos/lecciones/evaluaciones/preguntas/opciones/'+$pregunta_id
         });
         completeTableopciones();
       }
@@ -83,7 +83,7 @@
        
         $.ajax({
           data: dataEnviar,
-          url: 'http://arqtutorial:8080/admin/cursos/lecciones/evaluaciones/preguntas/opciones/'+$opcion_id,
+          url: ' /admin/cursos/lecciones/evaluaciones/preguntas/opciones/'+$opcion_id,
           type: 'delete',
           success:  function (response) {
                 console.log(response);
@@ -165,10 +165,10 @@
         //Ajax request
         $.ajax({
           data: dataEnviar,
-          url: 'http://arqtutorial:8080/admin/cursos/lecciones/evaluaciones/preguntas/opciones/'+$opcion_id,
+          url: ' /admin/cursos/lecciones/evaluaciones/preguntas/opciones/'+$opcion_id,
           type: 'put',
           success:  function (response) {
-            $url = 'http://arqtutorial:8080/admin/cursos/lecciones/'+$curso_id;
+            $url = ' /admin/cursos/lecciones/'+$curso_id;
             location.href = $url;
           }
         });
@@ -197,7 +197,7 @@
             $.ajax({
               dataType: 'json',
               data: dataEnviar,
-              url: 'http://arqtutorial:8080/admin/cursos/lecciones/evaluaciones/preguntas/opciones/'+$pregunta_id,
+              url: ' /admin/cursos/lecciones/evaluaciones/preguntas/opciones/'+$pregunta_id,
               type: 'get',
               success:  function (response) {
               console.log('> > Respuesta Opciones: ');

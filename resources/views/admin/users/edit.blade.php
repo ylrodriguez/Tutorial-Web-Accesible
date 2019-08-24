@@ -106,7 +106,7 @@
 
 						<hr/>
 						<div class="form-group">
-							<a href="http://arqtutorial:8080/admin/users" class="btn btn-warning">
+							<a  href="/admin/users" class="btn btn-warning">
                             <span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span>  Volver atrás</a>
 
 							{!! Form::submit('Guardar cambios', ['class' => 'btn btn-primary  pull-right']) !!}

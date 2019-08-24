@@ -87,7 +87,7 @@
               $tituloCurso =  response[i].titulo;
               $idCurso = response[i].id;
 
-              var varAppend ='<li class="dropdown dropdown-submenu"><a href="#" class="dropdown-toggle" data-toggle="dropdown">'+ $tituloCurso+'</a><ul class="dropdown-menu"><li><a href="http://arqtutorial:8080/member/cursos/lecciones/'+$idCurso+'">Abrir lista de lecciones<span class="glyphicon glyphicon-th-list" style="padding-left: 10px;"></span></a></li> <li role="separator" class="divider"></li>';
+              var varAppend ='<li class="dropdown dropdown-submenu"><a href="#" class="dropdown-toggle" data-toggle="dropdown">'+ $tituloCurso+'</a><ul class="dropdown-menu"><li><a  href="/member/cursos/lecciones/'+$idCurso+'">Abrir lista de lecciones<span class="glyphicon glyphicon-th-list" style="padding-left: 10px;"></span></a></li> <li role="separator" class="divider"></li>';
 
               for(var j=0; j<response[i].lecciones.length; j++){
                 $titulo =response[i].lecciones[j].titulo;
@@ -97,7 +97,7 @@
 
                 $url = 'member/cursos/open/'+$slug+'?id='+$id+'&num='+$num;
                 
-                varAppend += '<li><a href="http://arqtutorial:8080/'+$url+'">'+$titulo+'</a></li>';
+                varAppend += '<li><a  href="/'+$url+'">'+$titulo+'</a></li>';
               }
 
               varAppend += '</ul></li>';
