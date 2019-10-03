@@ -13,4 +13,12 @@ Usuarios:   - Usuario admin: Yojhanr95@gmail.com
             - Se puede ver el correo fácilmente de todos los usuarios en el query mencionado.
             - Todos los usuarios tienen clave 12345678
 
+## Screenshots
+<img src="screenshots/Captura.PNG">  
+<img src="screenshots/Captura1.PNG">  
+<img src="screenshots/Captura2.PNG">  
+<img src="screenshots/Captura3.PNG">  
+<img src="screenshots/Captura4.PNG">  
+<img src="screenshots/Captura5.PNG">  
+<img src="screenshots/Captura6.PNG">  
 
