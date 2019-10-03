@@ -3,6 +3,8 @@
 El presente proyecto es un aplicativo web que cumple con los estándares de accesibilidad propuestos por la W3C en las directrices de WCAG 2.0 el cual satisface el nivel A. El principal objetivo de esta página es ofrecer cursos virtuales acerca de la arquitectura de los celulares sin excluir a la población que sufra alguna discapacidad.  
 
 ## Screenshots
+<img src="screenshots/giphy1.gif">  
+<img src="screenshots/giphy2.gif">  
 <img src="screenshots/Captura.PNG">  
 <img src="screenshots/Captura1.PNG">  
 <img src="screenshots/Captura2.PNG">  
